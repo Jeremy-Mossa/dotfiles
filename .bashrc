@@ -26,6 +26,9 @@ unset rc
 
 PS1="\w --> "
 
+export EDITOR=vim
+export VISUAL=vim
+
 alias ls='ls -cp --color=auto'
 alias ls='ls -cp --color=auto'
 alias sl='ls -cp --color=auto'
