@@ -62,10 +62,12 @@ alias x0='xbacklight -dec 100'
 alias phys='epdfview /home/jbm/classes/physics/physics*every*pdf*'
 alias keys='vi /home/jbm/.fluxbox/keys'
 alias am=alsamixer
+alias df='df -h | grep home'
 
-sort_apps() {
+depsort() {
 	cat ~/Documents/to_install.txt | sort > ~/Documents/sorted
 	cat ~/Documents/sorted > ~/Documents/to_install.txt
+    cp ~/Documents/to_install.txt ~/.dependency
 	rm ~/Documents/sorted
 }
 
