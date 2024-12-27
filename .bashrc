@@ -38,7 +38,7 @@ alias brc='vi ~/.bashrc'
 alias src='source ~/.bashrc'
 
 alias c=clear
-alias cl=clear
+alias cl="clear; figlet "LINUX" | lolcat"
 
 alias install='yes | sudo dnf install'
 alias search='dnf search'

@@ -26,6 +26,7 @@ ssh
 ssh-keygen
 tldr
 tmux
+toilet
 vim
 xclip
 xterm
