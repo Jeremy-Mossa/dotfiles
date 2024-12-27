@@ -1,5 +1,6 @@
 acpi
 adb 
+bubblewrap
 cronie
 dillo
 fastboot
@@ -15,6 +16,7 @@ libcgif
 libjpeg
 libpng
 mplayer
+mupdf
 slim
 ssh
 ssh-keygen
