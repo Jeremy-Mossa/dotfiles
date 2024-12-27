@@ -5,6 +5,7 @@ cronie
 dillo
 fastboot
 feh
+figlet
 firefox-esr
 firejail
 fluxbox
@@ -16,6 +17,7 @@ htop
 libcgif
 libjpeg
 libpng
+lolcat
 mplayer
 mupdf
 redshift
