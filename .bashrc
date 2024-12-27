@@ -63,6 +63,7 @@ alias phys='epdfview /home/jbm/classes/physics/physics*every*pdf*'
 alias keys='vi /home/jbm/.fluxbox/keys'
 alias am=alsamixer
 alias df='df -h | grep home'
+alias pingf='ping -c 3 fedora.org'
 
 depsort() {
 	cat ~/Documents/to_install.txt | sort > ~/Documents/sorted
