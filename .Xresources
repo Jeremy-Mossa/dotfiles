@@ -1,6 +1,8 @@
 ! Use a nice truetype font and size by default... 
+!*.font: xft.monospace:style:Bold:size=14
 xterm*faceName: DejaVu Sans Mono Book
-xterm*faceSize: 12
+!xterm*faceName: Monospace Bold
+xterm*faceSize: 14
 
 ! xterm enabled to handle clipboard events
 xterm*selectToClipboard: true
