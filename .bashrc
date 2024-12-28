@@ -38,7 +38,7 @@ alias brc='vi ~/.bashrc'
 alias src='source ~/.bashrc'
 
 alias c=clear
-alias cl="clear; figlet "LINUX" | lolcat"
+alias cl="clear; figlet "LINUX" | lolcat; fastfetch"
 
 alias install='yes | sudo dnf install'
 alias search='dnf search'
@@ -67,10 +67,8 @@ alias ping='ping -c 3 ddg.gg'
 alias mupdf="firejail /bin/mupdf"
 
 depsort() {
-	cat ~/Documents/to_install.txt | sort > ~/Documents/sorted
-	cat ~/Documents/sorted > ~/Documents/to_install.txt
-    cp ~/Documents/to_install.txt ~/.dependency
-	rm ~/Documents/sorted
+	cat ~/Documents/to_install.txt | sort > ~/.dependency
+	cat ~/.dependency > ~/Documents/to_install.txt
 }
 
 kandr() {
