@@ -73,6 +73,10 @@ depsort() {
 	rm ~/Documents/sorted
 }
 
+kandr() {
+   firejail /bin/mupdf -r 117 books/C/C\ Programming\ Language\ 2E\ by\ Ritchie.pdf 13
+}
+
 docs() {
 	cd ~/Documents
 }
