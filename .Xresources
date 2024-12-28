@@ -1,6 +1,6 @@
 ! Use a nice truetype font and size by default... 
-!*.font: xft.monospace:style:Bold:size=14
-!xterm*faceName: DejaVu Sans Mono Book
+! *.font: xft.Hack-Bold:size=12
+! xterm*faceName: DejaVu Sans Mono Book
 xterm*faceName: Hack Bold
 xterm*faceSize: 12
 
