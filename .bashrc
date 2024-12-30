@@ -66,6 +66,7 @@ alias df='df -h | grep home'
 alias ping='ping -c 3 ddg.gg'
 alias mupdf="firejail /bin/mupdf"
 alias wifi='nmcli dev wifi'
+alias lock=xsecurelock
 
 depsort() {
 	cat ~/Documents/to_install.txt | sort > ~/.dependency
