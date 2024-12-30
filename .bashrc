@@ -28,6 +28,7 @@ PS1="\w --> "
 
 export EDITOR=vim
 export VISUAL=vim
+export PATH=$PATH:/home/fedora41/C
 
 alias ls='ls -cp --color=auto'
 alias ls='ls -cp --color=auto'
