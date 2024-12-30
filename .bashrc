@@ -75,7 +75,7 @@ depsort() {
 }
 
 kandr() {
-   firejail /bin/mupdf -r 117 books/C/C\ Programming\ Language\ 2E\ by\ Ritchie.pdf 15
+   firejail /bin/mupdf -r 117 books/C/C\ Programming\ Language\ 2E\ by\ Ritchie.pdf 19
 }
 
 docs() {
