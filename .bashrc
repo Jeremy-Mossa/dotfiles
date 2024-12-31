@@ -81,6 +81,12 @@ kandr() {
     2>/dev/null & exit 
 }
 
+bashcookbook() {
+    firejail /bin/mupdf \
+    ~/books/shell_scripting/Bash_Cookbook.pdf 54 \
+    2>/dev/null & exit 
+}
+
 docs() {
 	cd ~/Documents
 }
