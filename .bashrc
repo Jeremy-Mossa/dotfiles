@@ -34,6 +34,7 @@ alias ls='ls -cp --color=auto'
 alias ls='ls -cp --color=auto'
 alias sl='ls -cp --color=auto'
 alias la='ls -acp --color=auto'
+alias ldot='ls -d .*'
 
 alias brc='vi ~/.bashrc'
 alias src='source ~/.bashrc'
