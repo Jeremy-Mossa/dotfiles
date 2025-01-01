@@ -70,6 +70,20 @@ alias mupdf="firejail /bin/mupdf"
 alias wifi='nmcli dev wifi'
 alias lock=xsecurelock
 alias free='free -h'
+alias mulcon='mullvad connect'
+
+ipaddr() {
+  curl -s -o ipaddr -A "Windows NT" https://www.showmyip.com
+  grep -E '>City|>Country|>Your IPv4|>Internet' ipaddr |\
+  sed 's/<td>//g;s/<\/td>/ /g;s/<b>//g;s/<\/b>//g' |\
+  lolcat
+  # removes whitespace
+  # sed 's/<td>//g;s/<\/td>/ /g;s/<b>//g;s/<\/b>//g' > ip.txt
+  # cat ip.txt | sed 's/^[ \t]*//' | lolcat
+  # cat ip.txt
+  # rm ipaddr ip.txt
+  rm ipaddr
+}
 
 depsort() {
 	cat ~/Documents/to_install.txt | sort > ~/.dependency
@@ -77,17 +91,17 @@ depsort() {
 }
 
 kandr() {
-    # book is 238 pages
-    firejail /bin/mupdf -r 125 \
-    books/C/C\ Programming\ Language\ 2E\ by\ Ritchie.pdf 27 \
-    2>/dev/null & exit 
+  # book is 238 pages
+  firejail /bin/mupdf -r 125 \
+  books/C/C\ Programming\ Language\ 2E\ by\ Ritchie.pdf 27 \
+  2>/dev/null & exit 
 }
 
 bashcookbook() {
-    # book is 632 pages
-    firejail /bin/mupdf -r 144 \
-    ~/books/shell_scripting/Bash_Cookbook.pdf 54 \
-    2>/dev/null & exit 
+  # book is 632 pages
+  firejail /bin/mupdf -r 144 \
+  ~/books/shell_scripting/Bash_Cookbook.pdf 54 \
+  2>/dev/null & exit 
 }
 
 docs() {
