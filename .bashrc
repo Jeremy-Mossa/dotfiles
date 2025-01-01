@@ -76,13 +76,13 @@ depsort() {
 }
 
 kandr() {
-    firejail /bin/mupdf -r 117 \
+    firejail /bin/mupdf -r 125 \
     books/C/C\ Programming\ Language\ 2E\ by\ Ritchie.pdf 22 \
     2>/dev/null & exit 
 }
 
 bashcookbook() {
-    firejail /bin/mupdf \
+    firejail /bin/mupdf -r 144 \
     ~/books/shell_scripting/Bash_Cookbook.pdf 54 \
     2>/dev/null & exit 
 }
