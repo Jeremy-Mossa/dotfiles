@@ -71,6 +71,7 @@ alias wifi='nmcli dev wifi'
 alias lock=xsecurelock
 alias free='free -h'
 alias mulcon='mullvad connect'
+alias rto='rtorrent -n -d ~/Downloads -s ~/Downloads'
 
 ipaddr() {
   curl -s -o ipaddr -A "Windows NT" https://www.showmyip.com
