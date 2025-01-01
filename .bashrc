@@ -76,12 +76,14 @@ depsort() {
 }
 
 kandr() {
+    # book is 238 pages
     firejail /bin/mupdf -r 125 \
-    books/C/C\ Programming\ Language\ 2E\ by\ Ritchie.pdf 22 \
+    books/C/C\ Programming\ Language\ 2E\ by\ Ritchie.pdf 27 \
     2>/dev/null & exit 
 }
 
 bashcookbook() {
+    # book is 632 pages
     firejail /bin/mupdf -r 144 \
     ~/books/shell_scripting/Bash_Cookbook.pdf 54 \
     2>/dev/null & exit 
