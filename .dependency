@@ -21,7 +21,6 @@ libcgif
 libjpeg
 libpng
 lolcat
-mplayer
 mullvad-browser
 mullvad-vpn
 mupdf
@@ -35,6 +34,7 @@ tldr
 tmux
 toilet
 vim
+vlc
 xclip
 xlockmore
 xsecurelock
