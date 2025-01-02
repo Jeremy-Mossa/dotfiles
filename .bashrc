@@ -79,10 +79,8 @@ ipaddr() {
   sed 's/<td>//g;s/<\/td>/ /g;s/<b>//g;s/<\/b>//g' |\
   lolcat
   # removes whitespace
-  # sed 's/<td>//g;s/<\/td>/ /g;s/<b>//g;s/<\/b>//g' > ip.txt
-  # cat ip.txt | sed 's/^[ \t]*//' | lolcat
-  # cat ip.txt
-  # rm ipaddr ip.txt
+  # sed 's/<td>//g;s/<\/td>/ /g;s/<b>//g;s/<\/b>//g' |\
+  # sed 's/^[ \t]*//' | lolcat
   rm ipaddr
 }
 
@@ -101,7 +99,7 @@ kandr() {
 bashcookbook() {
   # book is 632 pages
   firejail /bin/mupdf -r 144 \
-  ~/books/shell_scripting/Bash_Cookbook.pdf 54 \
+  ~/books/shell_scripting/Bash_Cookbook.pdf 64 \
   2>/dev/null & exit 
 }
 
