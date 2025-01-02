@@ -54,6 +54,7 @@ alias m=mplayer
 alias menu='sudo vi /boot/grub/grub.cfg'
 alias lo=libreoffice 
 alias off='sudo shutdown -h now'
+alias poweroff='sudo poweroff'
 alias umount='sudo umount'
 alias b=acpi
 alias du='du -h'
