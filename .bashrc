@@ -40,7 +40,7 @@ alias brc='vi ~/.bashrc'
 alias src='source ~/.bashrc'
 
 alias c=clear
-alias cl="clear; figlet "LINUX" | lolcat; fastfetch --color green"
+alias cl="clear; figlet "LINUX" | lolcat -g 00FFFF:80FF00 -b"
 
 alias install='yes | sudo dnf install'
 alias search='dnf search'
@@ -77,7 +77,7 @@ ipaddr() {
   curl -s -o ipaddr -A "Windows NT" https://www.showmyip.com
   grep -E '>City|>Country|>Your IPv4|>Internet' ipaddr |\
   sed 's/<td>//g;s/<\/td>/ /g;s/<b>//g;s/<\/b>//g' |\
-  lolcat
+  lolcat -g 00FFFF:80FF00 -b
   # removes whitespace
   # sed 's/<td>//g;s/<\/td>/ /g;s/<b>//g;s/<\/b>//g' |\
   # sed 's/^[ \t]*//' | lolcat
