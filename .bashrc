@@ -101,7 +101,7 @@ kandr() {
 bashcookbook() {
   # book is 632 pages
   firejail /bin/mupdf -r 144 \
-  ~/books/shell_scripting/Bash_Cookbook.pdf 69 \
+  ~/books/shell_scripting/Bash_Cookbook.pdf 79 \
   2>/dev/null & exit 
 }
 
