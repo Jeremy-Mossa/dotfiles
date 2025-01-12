@@ -1,0 +1,5 @@
+# "close-tab" closes the current tab.
+# Note that this closes the browser window if there is only one tab.
+d=close-tab
+
+
