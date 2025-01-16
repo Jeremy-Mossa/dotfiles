@@ -81,6 +81,7 @@ alias grep='grep -i'
 alias update='sudo dnf update'
 alias history='vim ~/.bash_history'
 alias path='echo -e ${PATH//:/"\n"} | lolcat'
+alias ipgrep="grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'"
 
 ipaddr()
 {
