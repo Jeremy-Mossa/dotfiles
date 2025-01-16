@@ -81,6 +81,9 @@ alias grep='grep -i'
 alias update='sudo dnf update'
 alias history='vim ~/.bash_history'
 alias path='echo -e ${PATH//:/"\n"} | lolcat'
+
+# :xdigit: for hexidecimal characters
+alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
 alias ipgrep="grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'"
 
 ipaddr()
@@ -137,6 +140,11 @@ pics()
 stor()
 {
 	cd ~/Storage
+}
+
+downloads()
+{
+	cd ~/Downloads
 }
 
 media()
