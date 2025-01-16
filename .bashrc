@@ -30,7 +30,7 @@ set -o vi
 
 export EDITOR=vim
 export VISUAL=vim
-export PATH=$PATH:/home/unix/C
+#export PATH=$PATH:/home/unix/C
 export PATH=$(echo -e ${PATH//\:\/home\/fedora41\/C/})
 
 alias ls='ls -cp --color=auto'
