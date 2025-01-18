@@ -117,8 +117,8 @@ bashbook()
 {
   # book is 823 pages
   bash ~/scripts/bookview.sh &
-  firejail /bin/mupdf -r 144 \
-  ~/books/shell_scripting/Bash\ Quick\ Reference.pdf 3 \
+  firejail /bin/mupdf -r 180 \
+  ~/books/shell_scripting/Bash\ Quick\ Reference.pdf 20 \
   2>/dev/null & exit
 }
 
