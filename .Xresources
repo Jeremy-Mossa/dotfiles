@@ -1,7 +1,7 @@
 ! Use a nice truetype font and size by default... 
-! *.font: xft.Hack-Bold:size=12
+! *.font: xft.Hack:size=12
 ! xterm*faceName: Hack Bold
-xterm*faceName: DejaVu Sans Mono Book
+xterm*faceName: Hack
 xterm*faceSize: 12
 
 ! xterm enabled to handle clipboard events
