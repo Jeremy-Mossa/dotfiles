@@ -97,6 +97,7 @@ alias menu='sudo vi /boot/grub/grub.cfg'
 alias lo=libreoffice 
 alias off='sudo shutdown -h now'
 alias poweroff='sudo poweroff'
+alias mount='sudo mount'
 alias umount='sudo umount'
 alias b='acpi | sed "s/Battery 0: //g"'
 alias batt='acpi | sed "s/Battery 0: //g"'
