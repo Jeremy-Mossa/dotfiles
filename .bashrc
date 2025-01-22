@@ -125,6 +125,7 @@ alias path='echo -e ${PATH//:/"\n"} | lolcat'
 alias histgrep='cat ~/.bash_history | grep'
 alias histcat='cat ~/.bash_history' 
 alias stmux="tmux new ';' splitw -hf"
+alias chargecontrol='echo $(cat /sys/class/power_supply/BAT0/charge_control_end_threshold)%'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
