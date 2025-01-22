@@ -117,6 +117,9 @@ alias update='yes | sudo dnf update'
 alias upgrade='yes | sudo dnf update'
 alias history='vim ~/.bash_history'
 alias path='echo -e ${PATH//:/"\n"} | lolcat'
+alias histgrep='cat ~/.bash_history | grep'
+alias histcat='cat ~/.bash_history' 
+alias stmux="tmux new ';' splitw -hf"
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
@@ -190,3 +193,4 @@ media()
 
 xrdb -merge ~/.Xresources 
 PS1="\[\033$txtgrn\]\w --» \[\033[0m\]"
+stmux
