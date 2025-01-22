@@ -83,6 +83,10 @@ alias cl="clear; figlet "LINUX" | lolcat -b"
 alias install='yes | sudo dnf install'
 alias search='dnf search'
 
+# get the permissions number from file or folder
+# usually 640 for r/w on a file, 755 for dir
+alias nperm='stat -c %a'
+
 alias tasks='vim ~/Documents/tasks.txt'
 alias svi='sudo vim'
 alias ff="firefox & exit"
