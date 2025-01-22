@@ -78,7 +78,7 @@ alias brc='vi ~/.bashrc'
 alias src='source ~/.bashrc'
 
 alias c=clear
-alias cl="clear; figlet 'bash LINUX GNU' | lolcat -b"
+alias cl="clear; figlet 'bash LINUX GNU'"
 
 alias install='yes | sudo dnf install'
 alias search='dnf search'
