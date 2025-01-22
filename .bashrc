@@ -193,4 +193,3 @@ media()
 
 xrdb -merge ~/.Xresources 
 PS1="\[\033$txtgrn\]\w --» \[\033[0m\]"
-stmux
