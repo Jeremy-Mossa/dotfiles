@@ -167,6 +167,14 @@ perlbook()
   2>/dev/null & exit
 }
 
+progperl()
+{
+  read -p "Name of perl file: " f
+  touch $f.pl
+  chmod 755 $f.pl
+}
+
+
 docs()
 {
 	cd ~/Documents
