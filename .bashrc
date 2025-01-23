@@ -78,7 +78,7 @@ alias brc='vi ~/.bashrc'
 alias src='source ~/.bashrc'
 
 alias c=clear
-alias cl="clear; figlet 'bash LINUX GNU' | lolcat -g 00FFFF:80FF00 -b"
+alias cl="clear; figlet 'perL5 LINUX GNU' | lolcat -g 00FFFF:80FF00 -b"
 
 alias install='yes | sudo dnf install'
 alias search='dnf search'
@@ -158,12 +158,12 @@ kandr()
   2>/dev/null & exit 
 }
 
-bashbook()
+perlbook()
 {
-  # book is 823 pages
+  # book is x pages
   bash ~/scripts/bookview.sh &
-  firejail /bin/mupdf -r 180 \
-  ~/books/shell_scripting/Bash\ Shell\ Scripting*.pdf 1 \
+  firejail /bin/mupdf -r 144 \
+  ~/books/compsci/perl/Learning*.epub 1 \
   2>/dev/null & exit
 }
 
