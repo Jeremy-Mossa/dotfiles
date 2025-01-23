@@ -162,16 +162,18 @@ perlbook()
 {
   # book is x pages
   bash ~/scripts/bookview.sh &
-  firejail /bin/mupdf -r 144 \
-  ~/books/compsci/perl/Learning*.epub 1 \
+  firejail /bin/mupdf -r 125 \
+  ~/books/compsci/perl/Learning*.epub 30 \
   2>/dev/null & exit
 }
 
 progperl()
 {
   read -p "Name of perl file: " f
-  touch $f.pl
-  chmod 755 $f.pl
+  f=$f.pl
+  touch $f
+  chmod 755 $f
+  echo '#!/usr/bin/perl' > $f
 }
 
 
