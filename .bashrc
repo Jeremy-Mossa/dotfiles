@@ -78,7 +78,7 @@ alias brc='vi ~/.bashrc'
 alias src='source ~/.bashrc'
 
 alias c=clear
-alias cl="clear; figlet 'bash LINUX GNU'"
+alias cl="clear; figlet 'bash LINUX GNU' | lolcat -g 00FFFF:80FF00 -b"
 
 alias install='yes | sudo dnf install'
 alias search='dnf search'
@@ -107,7 +107,7 @@ alias ldev='ls /dev/ | grep sd'
 alias lynx='lynx -vikeys'
 alias x0='xbacklight -dec 100'
 alias phys='epdfview /home/jbm/classes/physics/physics*every*pdf*'
-alias keys='vi /home/jbm/.fluxbox/keys'
+alias keys='vi ~/.fluxbox/keys'
 alias am=alsamixer
 alias df='df -h | grep home'
 alias ping='ping -c 3 ddg.gg'
@@ -198,4 +198,5 @@ media()
 }
 
 xrdb -merge ~/.Xresources 
-PS1="\[\033$txtgrn\]\w --» \[\033[0m\]"
+#PS1="\[\033$txtgrn\]\w --» \[\033[0m\]"
+PS1="\e[38;5;208m\w --» "
