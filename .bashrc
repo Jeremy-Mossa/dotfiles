@@ -174,6 +174,7 @@ progperl()
   touch $f
   chmod 755 $f
   echo '#!/usr/bin/perl' > $f
+  echo -e "\nuse v5.40;" >> $f
 }
 
 
