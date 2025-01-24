@@ -175,7 +175,7 @@ progperl()
   chmod 755 $f
   echo '#!/usr/bin/perl' > $f
   echo -e "\nuse v5.40;" >> $f
-  echo "use utf8;" >> $f
+  echo -e "use utf8;\n\n" >> $f
 }
 
 
