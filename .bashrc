@@ -126,6 +126,7 @@ alias histgrep='cat ~/.bash_history | grep'
 alias histcat='cat ~/.bash_history' 
 alias stmux="tmux new ';' splitw -hf"
 alias chargecontrol='echo $(cat /sys/class/power_supply/BAT0/charge_control_end_threshold)%'
+alias progperl="bash /home/unix/perl/progperl.sh"
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
@@ -166,18 +167,6 @@ perlbook()
   ~/books/compsci/perl/Learning*.epub 76 \
   2>/dev/null & exit
 }
-
-progperl()
-{
-  read -p "Name of perl file: " f
-  f=$f.pl
-  touch $f
-  chmod 755 $f
-  echo '#!/usr/bin/perl' > $f
-  echo -e "\nuse v5.40;" >> $f
-  echo -e "use utf8;\n\n" >> $f
-}
-
 
 docs()
 {
