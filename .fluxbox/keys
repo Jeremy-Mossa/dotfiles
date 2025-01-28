@@ -138,6 +138,6 @@ Control Mod4 F12 :TakeToWorkspace 12
 
 # Spawn an xterm window in current workspace
 Control Mod1 t :ExecCommand xterm -geometry 95x54
-Control Mod1 b :ExecCommand firefox
+Control Mod1 b :ExecCommand librewolf
 Control Mod1 d :ExecCommand dillo 
 Control Mod1 f :Maximize
