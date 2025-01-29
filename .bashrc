@@ -164,7 +164,7 @@ perlbook()
   # book is x pages
   bash ~/scripts/bookview.sh &
   firejail /bin/mupdf -r 123 \
-  ~/books/compsci/perl/Learning*.epub 104 \
+  ~/books/compsci/perl/Learning*.epub 107 \
   2>/dev/null & exit
 }
 
