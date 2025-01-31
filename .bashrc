@@ -198,6 +198,11 @@ media()
         cd /media/
 }
 
+bmark()
+{
+        cd ~/curated_websites
+}
+
 xrdb -merge ~/.Xresources 
 #PS1="\[\033$txtgrn\]\w --» \[\033[0m\]"
 PS1="\e[38;5;208m\w --» "
