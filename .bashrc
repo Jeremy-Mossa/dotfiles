@@ -161,10 +161,10 @@ kandr()
 
 perlbook()
 {
-  # book is x pages
+  # book is 484 pages
   bash ~/scripts/bookview.sh &
   firejail /bin/mupdf -r 123 \
-  ~/books/compsci/perl/Learning*.epub 107 \
+  ~/books/compsci/perl/Learning*.epub 122 \
   2>/dev/null & exit
 }
 
