@@ -1,8 +1,11 @@
 set expandtab
 set nocompatible
-set number
+set nonumber
 set shiftwidth=2
 set tabstop=2
+set autoindent
+set smartindent
+set background=dark
 
 " text width
 set tw=76
