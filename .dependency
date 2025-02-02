@@ -46,7 +46,6 @@ vim
 vim-nerdtree
 vim-syntastic-c
 vim-syntastic-cpp
-vim-syntastic-perl
 vlc
 xclip
 xdotool
