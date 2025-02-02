@@ -44,8 +44,6 @@ tmux
 toilet
 vim
 vim-nerdtree
-vim-syntastic-c
-vim-syntastic-cpp
 vlc
 xclip
 xdotool

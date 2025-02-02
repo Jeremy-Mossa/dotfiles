@@ -23,9 +23,3 @@ set wildmenu
 set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 color twilight256
-
-augroup DisableTemplateSetupWizard
-  autocmd!
-  autocmd FileType perl let b:deoplete_auto_complete_start_length = -1
-augroup END
-
