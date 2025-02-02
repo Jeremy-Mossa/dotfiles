@@ -3,7 +3,10 @@ set nocompatible
 set number
 set shiftwidth=2
 set tabstop=2
+
+" text width
 set tw=76
+
 set expandtab
 set nobackup
 set scrolloff=10
