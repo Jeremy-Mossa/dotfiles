@@ -1,8 +1,10 @@
+
 aalib
 acpi
 adb 
 awesome-vim-colorschemes
 boxes
+boxes-vim
 bubblewrap
 cronie
 dillo
@@ -41,6 +43,11 @@ tldr
 tmux
 toilet
 vim
+vim-airline
+vim-nerdtree
+vim-syntastic-c
+vim-syntastic-cpp
+vim-syntastic-perl
 vlc
 xclip
 xdotool
