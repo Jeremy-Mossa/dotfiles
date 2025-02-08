@@ -78,26 +78,22 @@ alias brc='vi ~/.bashrc'
 alias src='source ~/.bashrc'
 
 alias c=clear
-alias cl="clear; figlet 'perl LINUX GNU' | lolcat -g 00FFFF:80FF00 -b"
+alias cl="clear; figlet 'perl GNU LINUX' | lolcat -b"
 
 alias install='yes | sudo dnf install'
 alias search='dnf search'
-
-# get the permissions number from file or folder
-# usually 640 for r/w on a file, 755 for dir
-alias nperm='stat -c %a'
 
 alias tasks='vim ~/Documents/tasks.txt'
 alias svi='sudo vim'
 alias ff="firefox & exit"
 alias reboot='sudo reboot'
+alias restart='sudo reboot'
 alias autopush='bash ~/scripts/git-autopush.sh'
 alias m=mplayer
 alias menu='sudo vi /boot/grub/grub.cfg'
 alias lo=libreoffice 
 alias off='sudo shutdown -h now'
 alias poweroff='sudo poweroff'
-alias mount='sudo mount'
 alias umount='sudo umount'
 alias b='acpi | sed "s/Battery 0: //g"'
 alias batt='acpi | sed "s/Battery 0: //g"'
@@ -107,7 +103,7 @@ alias ldev='ls /dev/ | grep sd'
 alias lynx='lynx -vikeys'
 alias x0='xbacklight -dec 100'
 alias phys='epdfview /home/jbm/classes/physics/physics*every*pdf*'
-alias keys='vi ~/.fluxbox/keys'
+alias keys='vi /home/jbm/.fluxbox/keys'
 alias am=alsamixer
 alias df='df -h | grep home'
 alias ping='ping -c 3 ddg.gg'
@@ -122,11 +118,7 @@ alias update='yes | sudo dnf update'
 alias upgrade='yes | sudo dnf update'
 alias history='vim ~/.bash_history'
 alias path='echo -e ${PATH//:/"\n"} | lolcat'
-alias histgrep='cat ~/.bash_history | grep'
-alias histcat='cat ~/.bash_history' 
-alias stmux="tmux new ';' splitw -hf"
-alias chargecontrol='echo $(cat /sys/class/power_supply/BAT0/charge_control_end_threshold)%'
-alias progperl="bash /home/unix/perl/progperl.sh"
+alias ifc=ifconfig
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
@@ -161,10 +153,10 @@ kandr()
 
 perlbook()
 {
-  # book is 484 pages
+  # book is 823 pages
   bash ~/scripts/bookview.sh &
-  firejail /bin/mupdf -r 160 \
-  ~/books/compsci/perl/Learning*.epub 128 \
+  firejail /bin/mupdf -r 180 \
+  ~/books/.pdf 1 \
   2>/dev/null & exit
 }
 
@@ -198,11 +190,8 @@ media()
         cd /media/
 }
 
-bmark()
-{
-        cd ~/curated_websites
-}
-
 xrdb -merge ~/.Xresources 
-#PS1="\[\033$txtgrn\]\w --» \[\033[0m\]"
-PS1="\e[38;5;208m\w --» "
+
+PS1="\[\033$txtgrn\]\w --» \[\033[0m\]"
+
+usb=$(ip link | grep wlp | cut -d':' -f2 | sed 's/ //')
