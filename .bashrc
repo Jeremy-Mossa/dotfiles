@@ -119,7 +119,7 @@ alias upgrade='yes | sudo dnf update'
 alias history='vim ~/.bash_history'
 alias path='echo -e ${PATH//:/"\n"} | lolcat'
 alias ifc=ifconfig
-alias areacode='bash ~/scripts/area_code.sh'
+alias areacode='cat ~/Documents/areacodes.txt | grep'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
