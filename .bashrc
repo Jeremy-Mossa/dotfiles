@@ -120,6 +120,7 @@ alias history='vim ~/.bash_history'
 alias path='echo -e ${PATH//:/"\n"} | lolcat'
 alias ifc=ifconfig
 alias areacode='cat ~/Documents/areacodes.txt | grep'
+alias chargecontrol='cat /sys/class/power_supply/BAT0/charge_control_end_threshold'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
