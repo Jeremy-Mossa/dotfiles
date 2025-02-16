@@ -68,8 +68,8 @@ export VISUAL=vim
 #export PATH=$PATH:/home/unix/C
 export PATH=$(echo -e ${PATH//\:\/home\/fedora41\/C/})
 
-alias ls='ls -cp --color=auto'
-alias ls='ls -cp --color=auto'
+alias l='ls -cpv --color=auto'
+alias ls='ls -cpv --color=auto'
 alias sl='ls -cp --color=auto'
 alias la='ls -acp --color=auto'
 alias ldot='ls -d .*'
