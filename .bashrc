@@ -117,6 +117,7 @@ alias grep='grep -i'
 alias update='yes | sudo dnf update'
 alias upgrade='yes | sudo dnf update'
 alias history='vim ~/.bash_history'
+alias cathist='cat ~/.bash_history | grep'
 alias path='echo -e ${PATH//:/"\n"} | lolcat'
 alias ifc=ifconfig
 alias areacode='cat ~/Documents/areacodes.txt | grep'
