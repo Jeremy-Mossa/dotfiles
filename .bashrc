@@ -121,11 +121,20 @@ alias path='echo -e ${PATH//:/"\n"} | lolcat'
 alias ifc=ifconfig
 alias areacode='cat ~/Documents/areacodes.txt | grep'
 alias chargecontrol='cat /sys/class/power_supply/BAT0/charge_control_end_threshold'
-alias ytr="prename 's/\[[^]]*\]//;s/ \./\./' *"
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
 alias ipgrep="grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'"
+
+pname()
+{
+  prename 's/\[[^]]*\]//' *
+  prename 's/ \./\./' *
+  prename 's/  / /' *
+  prename 's/ - / /' *
+  prename 's/- / /' *
+  prename 's/ -/ /' *
+}
 
 ipaddr()
 {
