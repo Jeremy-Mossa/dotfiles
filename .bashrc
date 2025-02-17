@@ -135,6 +135,8 @@ pname()
   prename 's/ - / /' *
   prename 's/- / /' *
   prename 's/ -/ /' *
+  prename 's/, / /' *
+  prename 's/\(//; s/\)//' *
 }
 
 ipaddr()
