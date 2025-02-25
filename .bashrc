@@ -179,6 +179,11 @@ perlbook()
   2>/dev/null & exit
 }
 
+find()
+{
+  /usr/bin/find / -iname *$1* 2>/dev/null
+}
+
 docs()
 {
 	cd ~/Documents
