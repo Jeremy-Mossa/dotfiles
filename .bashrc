@@ -125,6 +125,7 @@ alias chargecontrol='cat /sys/class/power_supply/BAT0/charge_control_end_thresho
 alias progperl='bash ~/scripts/progperl.sh'
 alias perltidy='perltidy -gnu -i=2'
 alias more=less
+alias rmd='rm -r'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
