@@ -218,4 +218,4 @@ xrdb -merge ~/.Xresources
 
 PS1="\[\033$txtgrn\]\w --» \[\033[0m\]"
 
-usb=$(ip link | grep wlp | cut -d':' -f2 | sed 's/ //')
+export usb=$(ip link | grep wlp | cut -d':' -f2 | sed 's/ //')
