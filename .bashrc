@@ -126,6 +126,7 @@ alias progperl='bash ~/scripts/progperl.sh'
 alias perltidy='perltidy -gnu -i=2'
 alias more=less
 alias rmd='rm -r'
+alias vlc='vlc --rate'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
@@ -141,6 +142,7 @@ pname()
   prename 's/ -/ /' *
   prename 's/, / /g' *
   prename 's/\(//; s/\)//g' *
+  prename 's/： /_/g' *
 }
 
 ipaddr()
