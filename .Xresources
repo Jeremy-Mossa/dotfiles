@@ -42,3 +42,8 @@ xterm*ScrollBar: false
 
 ! stop output to terminal from jumping down to bottom of scroll again
 xterm*scrollTtyOutput: false
+
+! prevent PS1 variable as window title
+xterm*allowTitleOps: false
+! default title. cli: xterm -T <title>
+xterm*Title: XTerm
