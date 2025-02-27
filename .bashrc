@@ -127,6 +127,7 @@ alias perltidy='perltidy -gnu -i=2'
 alias more=less
 alias rmd='rm -r'
 alias vlc='vlc --rate'
+alias lw='bash ~/scripts/browser.sh & exit'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
