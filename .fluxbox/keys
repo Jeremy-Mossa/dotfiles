@@ -138,6 +138,7 @@ Control Mod4 F12 :TakeToWorkspace 12
 
 # GUI in current workspace
 Control Mod1 t :ExecCommand xterm -geometry 65x10
+Control Mod1 l :ExecCommand xterm -geometry 65x20
 Control Mod1 b :ExecCommand librewolf
 Control Mod1 d :ExecCommand dillo 
 Control Mod1 v :ExecCommand vimb
