@@ -221,3 +221,9 @@ xrdb -merge ~/.Xresources
 PS1="\[\033$txtgrn\]\w --» \[\033[0m\]"
 
 export usb=$(ip link | grep wlp | cut -d':' -f2 | sed 's/ //')
+
+PATH="/home/jbm/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/jbm/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/jbm/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/jbm/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/jbm/perl5"; export PERL_MM_OPT;
