@@ -85,7 +85,7 @@ alias search='dnf search'
 
 alias tasks='vim ~/Documents/tasks.txt'
 alias svi='sudo vim'
-alias ff="firefox & exit"
+alias ff="bash ~/scripts/grok.sh"
 alias reboot='sudo reboot'
 alias restart='sudo reboot'
 alias autopush='bash ~/scripts/git-autopush.sh'
