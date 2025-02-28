@@ -149,6 +149,7 @@ pname()
   prename 's/Second Edition/2E/g' *
   prename 's/2ed/2E/g' *
   prename 's/2nd edition/2E/g' *
+  prename 's/2nd Edition/2E/g' *
 }
 
 tidyperl()
