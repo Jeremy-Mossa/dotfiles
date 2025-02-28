@@ -126,6 +126,7 @@ alias more=less
 alias rmd='rm -r'
 alias vlc='vlc --rate'
 alias lw='bash ~/scripts/browser.sh & exit'
+alias ai='bash ~/scripts/studio_ai.sh'
 alias ticker='bash ~/scripts/ticker.sh'
 
 # :xdigit: for hexidecimal characters
