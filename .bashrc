@@ -122,7 +122,6 @@ alias ifc=ifconfig
 alias areacode='cat ~/Documents/areacodes.txt | grep'
 alias chargecontrol='cat /sys/class/power_supply/BAT0/charge_control_end_threshold'
 alias progperl='bash ~/scripts/progperl.sh'
-alias perltidy='perltidy -gnu -i=2'
 alias more=less
 alias rmd='rm -r'
 alias vlc='vlc --rate'
@@ -146,6 +145,11 @@ pname()
   prename 's/： /_/g' *
 }
 
+tidyperl()
+{
+  perltidy -gnu -i=2 $1
+  mv $1.tdy $1
+}
 ipaddr()
 {
   curl -s -o ipaddr -A "Windows NT" https://www.showmyip.com
