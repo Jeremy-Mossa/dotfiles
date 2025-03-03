@@ -109,6 +109,7 @@ alias df='df -h | grep home'
 alias ping='ping -c 3 ddg.gg'
 alias mupdf="firejail /bin/mupdf"
 alias wifi='nmcli dev wifi'
+alias wicon='wifi connect'
 alias lock='xsecurelock 2>/dev/null'
 alias free='free -h'
 alias mulcon='mullvad connect'
@@ -127,8 +128,8 @@ alias rmd='rm -r'
 alias vlc='vlc --rate'
 alias lw='bash ~/scripts/browser.sh & exit'
 alias ai='bash ~/scripts/studio_ai.sh'
-alias ticker='bash ~/scripts/ticker.sh'
 alias wthr='perl ~/scripts/wthr.pl'
+alias ticker='bash ~/scripts/ticker.sh'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
