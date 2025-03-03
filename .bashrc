@@ -91,7 +91,7 @@ alias restart='sudo reboot'
 alias autopush='bash ~/scripts/git-autopush.sh'
 alias m=mplayer
 alias menu='sudo vi /boot/grub/grub.cfg'
-alias lo=libreoffice 
+alias lo='libreoffice >/dev/null 2>/dev/null &'
 alias off='sudo sync; sudo shutdown -h now'
 alias poweroff='sudo poweroff'
 alias umount='sudo umount'
@@ -196,7 +196,7 @@ perlbook()
   2>/dev/null & exit
 }
 
-find()
+fynd()
 {
   /usr/bin/find / -iname *$1* 2>/dev/null
 }
