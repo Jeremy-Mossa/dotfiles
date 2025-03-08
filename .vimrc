@@ -1,3 +1,5 @@
+colorscheme murphy
+
 set expandtab
 set nocompatible
 set number
