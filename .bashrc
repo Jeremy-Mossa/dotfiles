@@ -130,6 +130,7 @@ alias lw='bash ~/scripts/browser.sh & exit'
 alias ai='bash ~/scripts/studio_ai.sh'
 alias wthr='perl ~/scripts/wthr.pl'
 alias ticker='bash ~/scripts/ticker.sh'
+alias newhop='perl ~/perl/relays.pl; sleep 5; ipaddr'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
