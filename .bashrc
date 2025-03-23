@@ -78,7 +78,7 @@ alias brc='vi ~/.bashrc'
 alias src='source ~/.bashrc'
 
 alias c=clear
-alias cl="clear; figlet 'perl GNU LINUX' | lolcat -b"
+alias cl="clear; figlet 'perl GNU LINUX' | lolcat -g 00FFFF:80FF00 -b"
 
 alias install='yes | sudo dnf install'
 alias search='dnf search'
