@@ -142,4 +142,5 @@ Control Mod1 h :ExecCommand xterm -geometry 60x53
 Control Mod1 b :ExecCommand bash ~/scripts/browser.sh
 Control Mod1 d :ExecCommand dillo 
 Control Mod1 v :ExecCommand vimb
+Control Mod1 x :ExecCommand chessx 
 Control Mod1 f :Maximize
