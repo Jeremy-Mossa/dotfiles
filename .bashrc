@@ -83,9 +83,11 @@ alias cl="clear; figlet 'perl GNU LINUX' | lolcat -g 00FFFF:80FF00 -b"
 alias install='yes | sudo dnf install'
 alias search='dnf search'
 
+alias droid='bash ~/scripts/android.sh'
 alias adb='sudo adb'
 alias tasks='vim ~/Documents/tasks.txt'
 alias svi='sudo vim'
+alias svim='sudo vim'
 alias ff="bash ~/scripts/grok.sh"
 alias reboot='sudo reboot'
 alias restart='sudo reboot'
