@@ -58,3 +58,5 @@ xsecurelock
 xterm
 xz-lzma-compat
 yt-dlp
+perl-HTTP-Tiny-Paranoid
+wkhtmltopdf
