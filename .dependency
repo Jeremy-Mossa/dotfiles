@@ -53,6 +53,7 @@ xlockmore
 xorg
 xorg-x11-font-utils
 xorg-x11-server-Xorg
+xorg-x11-server-Xvfb
 xrdb
 xsecurelock
 xterm
