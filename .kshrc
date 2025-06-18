@@ -245,6 +245,11 @@ media()
         cd /media/
 }
 
+cpp()
+{
+  cd ~/C++
+}
+
 xrdb -merge ~/.Xresources 
 
 export usb=$(ip link | grep wlp | cut -d':' -f2 | sed 's/ //')
