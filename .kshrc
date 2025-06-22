@@ -131,7 +131,7 @@ alias wthr='perl ~/scripts/wthr.pl'
 alias ticker='bash ~/scripts/ticker.sh'
 alias newhop='perl ~/perl/relays.pl; sleep 5; ipaddr'
 alias dmesg='sudo dmesg'
-alias grok='perl ~/perl/grok.pl'
+alias grok='perl ~/scripts/grok2.pl'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
