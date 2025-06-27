@@ -139,6 +139,8 @@ alias ipgrep="grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'"
 
 wicon()
 {
+  sudo ifconfig $usb down
+  sudo ifconfig $usb up
   if nmcli dev wifi list | \
     grep UD025 >/dev/null; then
       nmcli dev wifi connect UD025 --ask
