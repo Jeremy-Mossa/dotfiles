@@ -133,6 +133,7 @@ alias newhop='perl ~/perl/relays.pl; sleep 5; ipaddr'
 alias dmesg='sudo dmesg'
 alias grok='perl ~/scripts/grok2.pl'
 alias yt='firefox --no-remote -P yt-adblock https://youtu.be'
+alias webstore='perl ~/scripts/webstore.pl'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
