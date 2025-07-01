@@ -151,6 +151,10 @@ wicon()
     grep Xperia5iii >/dev/null; then
     nmcli dev wifi connect Xperia5iii --ask
 
+  elif nmcli dev wifi list | \
+    grep "The Zen Hotel WiFi"  >/dev/null; then
+    nmcli dev wifi connect "The Zen Hotel WiFi" --ask
+
   else
     echo "No network found"
   fi
