@@ -258,6 +258,20 @@ cpp()
   cd ~/C++
 }
 
+batch_rename()
+{
+  for f in *.jpg; do 
+    feh --auto-zoom --fullscreen "$f" & pid=$!
+    wait $pid
+    printf "Enter new name for $f (without .jpg): "
+    read name
+    if [[ -n "$name" && ! -e "$name.jpg" ]]; then 
+      mv "$f" "$name.jpg"
+    else echo "Skipped: Invalid name or file exists"
+    fi
+  done
+}
+
 xrdb -merge ~/.Xresources 
 
 export usb=$(ip link | grep wlp | cut -d':' -f2 | sed 's/ //')
