@@ -260,7 +260,8 @@ cpp()
 
 play()
 {
-  firefox --no-remote -P "temp-profile" file:///$(pwd)/$1 &
+  firefox --no-remote -P "temp-profile" \
+  file:///$(pwd)/$1 >/dev/null 2>&1 &
 }
 
 batch_rename()
