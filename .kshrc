@@ -124,7 +124,6 @@ alias chargecontrol='cat /sys/class/power_supply/BAT0/charge_control_end_thresho
 alias progperl='bash ~/scripts/progperl.sh'
 alias more=less
 alias rmd='rm -r'
-alias vlc='vlc --rate'
 alias lw='bash ~/scripts/browser.sh & exit'
 alias ai='bash ~/scripts/studio_ai.sh'
 alias wthr='perl ~/scripts/wthr.pl'
@@ -134,6 +133,7 @@ alias dmesg='sudo dmesg'
 alias grok='perl ~/scripts/grok2.pl'
 alias yt='firefox --no-remote -P yt-adblock https://youtu.be'
 alias webstore='perl ~/scripts/webstore.pl'
+alias vidcopy='/bin/ksh /home/jbm/scripts/vidcopy.sh'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
@@ -256,6 +256,11 @@ media()
 cpp()
 {
   cd ~/C++
+}
+
+play()
+{
+  firefox --no-remote -P "temp-profile" file:///$(pwd)/$1 &
 }
 
 batch_rename()
