@@ -264,6 +264,12 @@ play()
   file:///$(pwd)/$1 >/dev/null 2>&1 &
 }
 
+fyle()
+{
+  touch $1
+  chmod +x $1
+}
+
 batch_rename()
 {
   for f in *.jpg; do 
