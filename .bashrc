@@ -247,3 +247,5 @@ PERL5LIB="/home/jbm/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/jbm/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/jbm/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jbm/perl5"; export PERL_MM_OPT;
+export ANDROID_HOME=~/android-sdk
+export PATH=/latest/bin:/home/jbm/flutter/bin:/home/jbm/flutter/bin:/home/jbm/flutter/bin:/home/jbm/perl5/bin:/home/jbm/.local/bin:/home/jbm/bin:/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin
