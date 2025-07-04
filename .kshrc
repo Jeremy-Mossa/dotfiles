@@ -134,6 +134,7 @@ alias grok='perl ~/scripts/grok2.pl'
 alias yt='firefox --no-remote -P yt-adblock https://youtu.be'
 alias webstore='perl ~/scripts/webstore.pl'
 alias vidcopy='/bin/ksh /home/jbm/scripts/vidcopy.sh'
+alias mirror='/bin/ksh /home/jbm/scripts/mirror.sh'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
