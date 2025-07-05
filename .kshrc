@@ -296,3 +296,4 @@ export usb=$(ip link | grep wlp | cut -d':' -f2 | sed 's/ //')
 export PATH="$HOME/flutter/bin:$PATH"
 export ANDROID_HOME=~/android-sdk
 export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH
+export CXX=clang++
