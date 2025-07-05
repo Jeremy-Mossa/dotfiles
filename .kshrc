@@ -137,6 +137,7 @@ alias vidcopy='/bin/ksh /home/jbm/scripts/vidcopy.sh'
 alias mirror='/bin/ksh /home/jbm/scripts/mirror.sh'
 alias waydroid='waydroid show-full-ui'
 alias geny='/home/jbm/genymotion/genymotion/genymotion'
+alias chrome='/usr/bin/chromium-browser'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
