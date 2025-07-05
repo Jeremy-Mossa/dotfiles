@@ -255,7 +255,7 @@ downloads()
 
 media()
 {
-        cd /media/
+  cd /media/
 }
 
 cpp()
@@ -273,6 +273,38 @@ fyle()
 {
   touch $1
   chmod +x $1
+}
+
+vidmcoc() {
+  cd ~/Downloads || return 1
+
+  file_list=""
+  adb -s 6433f574 shell \
+  find /storage/emulated/0/Movies/XRecorder0/ \
+  -name "*.mp4" | while read -r file; do
+    adb -s 6433f574 pull "$file" ./
+    file_list="$file_list $(basename "$file")"
+  done
+
+  if [ -n "$file_list" ]; then
+    printf "Enter new base name for the file(s): "
+    read -r new_name
+    if [ -z "$new_name" ]; then
+      echo "No name provided, skipping rename."
+      return 1
+    fi
+    count=0
+    for file in $file_list; do
+      if [ "$count" -eq 0 ]; then
+          mv "$file" "/home/jbm/vids_mcoc/${new_name}.mp4"
+      else
+          mv "$file" "/home/jbm/vids_mcoc/${new_name}_${count}.mp4"
+      fi
+      count=$((count + 1))
+    done
+    else
+      echo "No .mp4 files found."
+    fi
 }
 
 batch_rename()
