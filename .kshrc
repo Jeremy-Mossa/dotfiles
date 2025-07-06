@@ -138,6 +138,7 @@ alias mirror='/bin/ksh /home/jbm/scripts/mirror.sh'
 alias geny='/home/jbm/genymotion/genymotion/genymotion'
 alias chrome='/usr/bin/chromium-browser'
 alias line='/bin/ksh /home/jbm/scripts/line.sh'
+alias audiosmooth='/bin/ksh /home/jbm/scripts/audio_smooth.sh'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
@@ -295,8 +296,12 @@ vidmcoc() {
     count=0
     for file in $file_list; do
       if [ "$count" -eq 0 ]; then
+          sudo chown jbm "$file"
+          chmod 644 "$file"
           mv "$file" "/home/jbm/vids_mcoc/${new_name}.mp4"
       else
+          sudo chown jbm "$file"
+          chmod 644 "$file"
           mv "$file" "/home/jbm/vids_mcoc/${new_name}_${count}.mp4"
       fi
       count=$((count + 1))
