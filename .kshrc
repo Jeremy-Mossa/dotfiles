@@ -311,6 +311,7 @@ vidmcoc() {
     else
       echo "No .mp4 files found."
     fi
+
   cd ~/vids_mcoc || return 1
 }
 
