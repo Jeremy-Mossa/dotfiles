@@ -298,10 +298,12 @@ vidmcoc() {
       if [ "$count" -eq 0 ]; then
           sudo chown jbm "$file"
           chmod 644 "$file"
+          /home/jbm/scripts/audio_smooth.sh "$file"
           mv "$file" "/home/jbm/vids_mcoc/${new_name}.mp4"
       else
           sudo chown jbm "$file"
           chmod 644 "$file"
+          /home/jbm/scripts/audio_smooth.sh "$file"
           mv "$file" "/home/jbm/vids_mcoc/${new_name}_${count}.mp4"
       fi
       count=$((count + 1))
