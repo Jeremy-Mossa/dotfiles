@@ -1,5 +1,2 @@
-0,30 * * * * /home/jbm/scripts/git-autopush.sh
-1,31 * * * * /home/jbm/scripts/dotfile-backups.sh
-55 11,23 * * * /usr/bin/perl /home/jbm/scripts/webstore.pl
-0 */3 * * * /home/jbm/scripts/renew_dhcp.sh
-@reboot /usr/bin/perl /home/jbm/scripts/webstore.pl
+0,30 * * * * /home/unix/scripts/git-autopush.sh
+1,31 * * * * /home/unix/scripts/dotfile-backups.sh
