@@ -164,6 +164,10 @@ wicon()
     grep "CitiGarden Guest"  >/dev/null; then
     nmcli dev wifi connect "CitiGarden Guest" --ask
 
+  elif nmcli dev wifi list | \
+    grep HotelVue  >/dev/null; then
+    nmcli dev wifi connect HotelVue --ask
+
   else
     echo "No network found"
   fi
