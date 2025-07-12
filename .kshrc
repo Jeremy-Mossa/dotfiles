@@ -84,7 +84,6 @@ alias adb='sudo adb'
 alias tasks='vim ~/Documents/tasks.txt'
 alias svi='sudo vim'
 alias svim='sudo vim'
-alias ff="bash ~/scripts/grok.sh"
 alias reboot='sudo reboot'
 alias restart='sudo reboot'
 alias autopush='bash ~/scripts/git-autopush.sh'
@@ -130,12 +129,12 @@ alias wthr='perl ~/scripts/wthr.pl'
 alias ticker='bash ~/scripts/ticker.sh'
 alias newhop='perl ~/perl/relays.pl; sleep 5; ipaddr'
 alias dmesg='sudo dmesg'
-alias grok='perl ~/scripts/grok2.pl'
+alias grok='perl ~/scripts/grok.sh'
 alias yt='firefox --no-remote -P yt-adblock https://youtu.be >/dev/null 2>&1 &'
 alias webstore='perl ~/scripts/webstore.pl'
 alias vidcopy='/bin/ksh /home/jbm/scripts/vidcopy.sh'
 alias mirror='/bin/ksh /home/jbm/scripts/mirror.sh'
-alias geny='/home/jbm/genymotion/genymotion/genymotion'
+alias geny='/opt/genymobile/genymotion/genymotion'
 alias chrome='/usr/bin/chromium-browser'
 alias line='/bin/ksh /home/jbm/scripts/line.sh'
 alias audiosmooth='/bin/ksh /home/jbm/scripts/audio_smooth.sh'
@@ -144,29 +143,33 @@ alias audiosmooth='/bin/ksh /home/jbm/scripts/audio_smooth.sh'
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
 alias ipgrep="grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'"
 
-wicon()
-{
-  sudo ifconfig $usb down
-  sudo ifconfig $usb up
-  if nmcli dev wifi list | \
-    grep UD025 >/dev/null; then
-      nmcli dev wifi connect UD025 --ask
-  
-  elif nmcli dev wifi list | \
-    grep Xperia5iii >/dev/null; then
-    nmcli dev wifi connect Xperia5iii --ask
+wicon() {
+    # Reset the USB interface
+    sudo ifconfig "$usb" down
+    sudo ifconfig "$usb" up
 
-  elif nmcli dev wifi list | \
-    grep "The Zen Hotel WiFi"  >/dev/null; then
-    nmcli dev wifi connect "The Zen Hotel WiFi" --ask
+    # Scan WiFi networks once and store the list
+    wifi_list=$(nmcli dev wifi list)
 
-  elif nmcli dev wifi list | \
-    grep "CitiGarden Guest"  >/dev/null; then
-    nmcli dev wifi connect "CitiGarden Guest" --ask
+    # List of networks in priority order
+    for ssid in \
+        UD025 \
+        Xperia5iii \
+        cmvlib \
+        HotelVue \
+        "The Zen Hotel WiFi" \
+        "CitiGarden Guest"; do
 
-  else
+        # Check if the SSID is in the list
+        if echo "$wifi_list" | grep -q "$ssid"; then
+            # Connect to the first matching network
+            nmcli dev wifi connect "$ssid" --ask
+            return  # Exit after successful conn
+        fi
+    done
+
+    # If no matching network found
     echo "No network found"
-  fi
 }
 
 pname()
@@ -338,6 +341,6 @@ xrdb -merge ~/.Xresources
 export usb=$(ip link | grep wlp | cut -d':' -f2 | sed 's/ //')
 
 export PATH="$HOME/flutter/bin:$PATH"
-export ANDROID_HOME=~/android-sdk
-export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH
 export CXX=clang++
+export MESA_GL_VERSION_OVERRIDE=3.3 MESA_GLSL_VERSION_OVERRIDE=330
+export QEMU_GLES_EMULATION=software
