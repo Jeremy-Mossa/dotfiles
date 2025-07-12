@@ -160,7 +160,6 @@ wicon() {
         "The Zen Hotel WiFi" \
         "CitiGarden Guest"; do
 
-<<<<<<< HEAD
         # Check if the SSID is in the list
         if echo "$wifi_list" | grep -q "$ssid"; then
             # Connect to the first matching network
@@ -170,13 +169,11 @@ wicon() {
     done
 
     # If no matching network found
-=======
   elif nmcli dev wifi list | \
     grep HotelVue  >/dev/null; then
     nmcli dev wifi connect HotelVue --ask
 
   else
->>>>>>> 19a469301b09ba093dd8252fd4beaca288ca41a9
     echo "No network found"
 }
 
