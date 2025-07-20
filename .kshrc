@@ -165,16 +165,10 @@ wicon() {
             # Connect to the first matching network
             nmcli dev wifi connect "$ssid" --ask
             return  # Exit after successful conn
+        else
+          echo "No network found"
         fi
     done
-
-    # If no matching network found
-  elif nmcli dev wifi list | \
-    grep HotelVue  >/dev/null; then
-    nmcli dev wifi connect HotelVue --ask
-
-  else
-    echo "No network found"
 }
 
 pname()
