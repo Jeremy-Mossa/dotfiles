@@ -162,9 +162,9 @@ wicon() {
 
         # Check if the SSID is in the list
         if echo "$wifi_list" | grep -q "$ssid"; then
-            # Connect to the first matching network
-            nmcli dev wifi connect "$ssid" --ask
-            return  # Exit after successful conn
+          # Connect to the first matching network
+          nmcli dev wifi connect "$ssid" --ask
+          return  # Exit after successful conn
         else
           echo "No network found"
         fi
