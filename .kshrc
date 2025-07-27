@@ -157,6 +157,7 @@ wicon() {
         Xperia5iii \
         cmvlib \
         HotelVue \
+        HotelZicoWIFI \
         "The Zen Hotel WiFi" \
         "CitiGarden Guest"; do
 
