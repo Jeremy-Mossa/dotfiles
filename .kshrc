@@ -78,6 +78,8 @@ alias cl="clear; figlet 'perl GNU LINUX' | lolcat -g 00FFFF:80FF00 -b"
 alias install='yes | sudo dnf install --repo=fedora'
 alias search='dnf search'
 
+alias ff=fastfetch
+alias copy='rsync -av --progress'
 alias xdomouse='xdotool getmouselocation'
 alias droid='bash ~/scripts/android.sh'
 alias adb='sudo adb'
@@ -104,13 +106,13 @@ alias x0='xbacklight -dec 100'
 alias phys='epdfview /home/jbm/classes/physics/physics*every*pdf*'
 alias keys='vi /home/jbm/.fluxbox/keys'
 alias am=alsamixer
-alias df='df -h | grep home'
+alias df='df -h | head -n2'
 alias ping='ping -c 3 ddg.gg'
 alias mupdf="firejail /bin/mupdf"
 alias wifi='nmcli dev wifi'
 alias lock='xsecurelock 2>/dev/null'
 alias free='free -h'
-alias mulcon='mullvad connect'
+alias mulcon='mullvad connect && sleep 7 && ipaddr'
 alias grep='grep -i'
 alias update='yes | sudo dnf update'
 alias upgrade='yes | sudo dnf update'
@@ -120,24 +122,27 @@ alias path='echo -e ${PATH//:/"\n"} | lolcat'
 alias ifc=ifconfig
 alias areacode='cat ~/Documents/areacodes.txt | grep'
 alias chargecontrol='cat /sys/class/power_supply/BAT0/charge_control_end_threshold'
-alias progperl='bash ~/scripts/progperl.sh'
+alias progperl='$HOME/scripts/progperl.pl'
 alias more=less
 alias rmd='rm -r'
-alias lw='bash ~/scripts/browser.sh & exit'
 alias ai='bash ~/scripts/studio_ai.sh'
 alias wthr='perl ~/scripts/wthr.pl'
 alias ticker='bash ~/scripts/ticker.sh'
 alias newhop='perl ~/perl/relays.pl; sleep 5; ipaddr'
 alias dmesg='sudo dmesg'
 alias grok='perl ~/scripts/grok.sh'
-alias yt='firefox --no-remote -P yt-adblock https://youtu.be >/dev/null 2>&1 &'
-alias webstore='perl ~/scripts/webstore.pl'
+alias yt='firefox --private-window -P yt-adblock https://youtu.be >/dev/null 2>&1 &'
+alias icecat='icecat --private-window 2>&1 &'
+alias webstore='perl ~/scripts/webstore2.pl'
 alias vidcopy='/bin/ksh /home/jbm/scripts/vidcopy.sh'
 alias mirror='/bin/ksh /home/jbm/scripts/mirror.sh'
 alias geny='/opt/genymobile/genymotion/genymotion'
 alias chrome='/usr/bin/chromium-browser'
 alias line='/bin/ksh /home/jbm/scripts/line.sh'
 alias audiosmooth='/bin/ksh /home/jbm/scripts/audio_smooth.sh'
+alias fast=fastfetch
+alias ytc='$HOME/scripts/yt-cutter.sh'
+alias musicsync="$HOME/scripts/musicsync.sh"
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
@@ -156,24 +161,24 @@ wicon() {
         UD025 \
         Xperia5iii \
         cmvlib \
+        guests \
         HotelVue \
+        Berkeley-Visitor \
+        HotelZicoWIFI \
+        AthertonPark \
         "The Zen Hotel WiFi" \
+        "Motel 6" \
+        "Motel6 (Macrotech)" \
         "CitiGarden Guest"; do
 
         # Check if the SSID is in the list
         if echo "$wifi_list" | grep -q "$ssid"; then
-            # Connect to the first matching network
+            # Connect to first matching network
             nmcli dev wifi connect "$ssid" --ask
             return  # Exit after successful conn
         fi
     done
 
-    # If no matching network found
-  elif nmcli dev wifi list | \
-    grep HotelVue  >/dev/null; then
-    nmcli dev wifi connect HotelVue --ask
-
-  else
     echo "No network found"
 }
 
@@ -188,12 +193,26 @@ pname()
   prename 's/, / /g' *
   prename 's/\(//; s/\)//g' *
   prename 's/： /_/g' *
+  prename 's/ ｜ / /g' *
   prename 's/\.\.\.//g' *
   prename 's/Second edition/2E/g' *
   prename 's/Second Edition/2E/g' *
   prename 's/2ed/2E/g' *
   prename 's/2nd edition/2E/g' *
   prename 's/2nd Edition/2E/g' *
+}
+
+repolist() {
+    if [ -z "$1" ]; then
+        echo "Usage: repolist <username>"
+        return 1
+    fi
+    echo
+    jq_expr='.[] | "name: \(.name)\n" +'
+    jq_expr="$jq_expr \"description: \(.description)\n\" +"
+    jq_expr="$jq_expr \"url: \(.html_url)\n\n\""
+    curl -s "https://api.github.com/users/$1/repos" |
+    jq -r "$jq_expr"
 }
 
 tidyperl()
@@ -209,12 +228,6 @@ ipaddr()
   sed 's/<td>//g;s/<\/td>/ /g;s/<b>//g;s/<\/b>//g' |\
   lolcat -g 00FFFF:80FF00 -b
   rm ipaddr
-}
-
-depsort()
-{
-	cat ~/Documents/to_install.txt | sort > ~/.dependency
-	cat ~/.dependency > ~/Documents/to_install.txt
 }
 
 kandr()
@@ -260,9 +273,19 @@ stor()
 	cd ~/Storage
 }
 
+dl()
+{
+	cd ~/Downloads
+}
+
 downloads()
 {
 	cd ~/Downloads
+}
+
+vids()
+{
+	cd ~/Downloads/vids
 }
 
 media()
@@ -343,9 +366,15 @@ batch_rename()
 
 xrdb -merge ~/.Xresources 
 
+export audiobooks='/storage/emulated/0/Audiobooks'
+export music='/storage/emulated/0/Music'
+export podcasts='/storage/emulated/0/Podcasts'
 export usb=$(ip link | grep wlp | cut -d':' -f2 | sed 's/ //')
-
 export PATH="$HOME/flutter/bin:$PATH"
 export CXX=clang++
 export MESA_GL_VERSION_OVERRIDE=3.3 MESA_GLSL_VERSION_OVERRIDE=330
 export QEMU_GLES_EMULATION=software
+export ANDROID_SDK_ROOT=$HOME/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export CHROME_EXECUTABLE=/usr/bin/chromium-browser

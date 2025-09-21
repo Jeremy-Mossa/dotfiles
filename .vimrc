@@ -4,6 +4,7 @@ set expandtab
 set nocompatible
 set number
 set shiftwidth=2
+set textwidth=70
 set tabstop=2
 set nowrap
 set expandtab
