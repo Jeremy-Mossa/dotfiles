@@ -54,7 +54,7 @@ session.screen0.windowMenu:	/home/fedora41/.fluxbox/windowmenu
 session.screen0.windowPlacement:	RowMinOverlapPlacement
 session.screen0.workspaceNames:	Workspace 1,Workspace 2,Workspace 3,Workspace 4,
 session.screen0.maxDisableResize:	false
-session.screen0.workspaces:	4
+session.screen0.workspaces:	6
 session.screen0.strftimeFormat:	%k:%M  %a %d %b
 session.screen0.focusModel:	ClickFocus
 session.ignoreBorder:	false
