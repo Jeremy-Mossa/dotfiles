@@ -159,6 +159,7 @@ wicon() {
         HotelVue \
         HotelZicoWIFI \
         "The Zen Hotel WiFi" \
+        "Motel 6" \
         "CitiGarden Guest"; do
 
         # Check if the SSID is in the list
