@@ -163,16 +163,23 @@ wicon() {
         cmvlib \
         guests \
         HotelVue \
+<<<<<<< HEAD
         Berkeley-Visitor \
         HotelZicoWIFI \
         AthertonPark \
         "The Zen Hotel WiFi" \
         "Motel 6" \
         "Motel6 (Macrotech)" \
+=======
+        HotelZicoWIFI \
+        "The Zen Hotel WiFi" \
+        "Motel 6" \
+>>>>>>> 3ad8de28c6c4d5cc2ea89dd3a6de3ab0461f7818
         "CitiGarden Guest"; do
 
         # Check if the SSID is in the list
         if echo "$wifi_list" | grep -q "$ssid"; then
+<<<<<<< HEAD
             # Connect to first matching network
             nmcli dev wifi connect "$ssid" --ask
             return  # Exit after successful conn
@@ -180,6 +187,15 @@ wicon() {
     done
 
     echo "No network found"
+=======
+          # Connect to the first matching network
+          nmcli dev wifi connect "$ssid" --ask
+          return  # Exit after successful conn
+        else
+          echo "No network found"
+        fi
+    done
+>>>>>>> 3ad8de28c6c4d5cc2ea89dd3a6de3ab0461f7818
 }
 
 pname()
