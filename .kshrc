@@ -124,7 +124,7 @@ alias areacode='cat ~/Documents/areacodes.txt | grep'
 alias chargecontrol='cat /sys/class/power_supply/BAT0/charge_control_end_threshold'
 alias progperl='$HOME/scripts/progperl.pl'
 alias more=less
-alias rmd='rm -r'
+alias rmd='rm -rf'
 alias ai='bash ~/scripts/studio_ai.sh'
 alias wthr='perl ~/scripts/wthr.pl'
 alias ticker='bash ~/scripts/ticker.sh'
@@ -143,6 +143,7 @@ alias audiosmooth='/bin/ksh /home/jbm/scripts/audio_smooth.sh'
 alias fast=fastfetch
 alias ytc='$HOME/scripts/yt-cutter.sh'
 alias musicsync="$HOME/scripts/musicsync.sh"
+alias audio='yt-dlp -x --audio-format opus'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
