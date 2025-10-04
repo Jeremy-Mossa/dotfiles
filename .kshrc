@@ -151,8 +151,8 @@ alias ipgrep="grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'"
 
 wicon() {
     # Reset the USB interface
-    sudo ifconfig "$usb" down
-    sudo ifconfig "$usb" up
+    sudo ifconfig "$usb" down >/dev/null 2>&1
+    sudo ifconfig "$usb" up >/dev/null 2>&1
 
     # Scan WiFi networks once and store the list
     wifi_list=$(nmcli dev wifi list)
