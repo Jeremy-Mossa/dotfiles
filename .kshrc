@@ -159,6 +159,7 @@ wicon() {
 
     # List of networks in priority order
     for ssid in \
+        88:DC:97:0D:D5:5D \
         UD025 \
         Xperia5iii \
         cmvlib \
