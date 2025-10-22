@@ -367,6 +367,11 @@ batch_rename()
   done
 }
 
+words()
+{
+  wc $1 -w | cut -d' ' -f1
+}
+
 xrdb -merge ~/.Xresources 
 
 export audiobooks='/storage/emulated/0/Audiobooks'
