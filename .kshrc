@@ -372,6 +372,16 @@ words()
   wc $1 -w | cut -d' ' -f1
 }
 
+writer()
+{
+  xterm -T "Background" &
+  sleep 0.1
+  wmctrl -r "Background" -b add,maximized_vert,maximized_horz
+  xterm -T "Writer" -geometry 90x50+510+0 &
+  sleep 0.1
+  wmctrl -r "Writer" -b add,maximized_vert
+}
+
 xrdb -merge ~/.Xresources 
 
 export audiobooks='/storage/emulated/0/Audiobooks'
