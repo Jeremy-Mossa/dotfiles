@@ -1,5 +1,6 @@
 colorscheme murphy
 
+set modeline
 set expandtab
 set nocompatible
 set number

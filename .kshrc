@@ -334,10 +334,7 @@ words()
 
 writer()
 {
-  xterm -T "Background" &
-  sleep 0.1
-  wmctrl -r "Background" -b add,maximized_vert,maximized_horz
-  xterm -T "Writer" -geometry 90x50+510+0 &
+  xterm -T "Writer" -geometry 90x53+510+0 &
   sleep 0.1
   wmctrl -r "Writer" -b add,maximized_vert
 }
