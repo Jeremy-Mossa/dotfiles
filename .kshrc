@@ -90,6 +90,7 @@ alias reboot='sudo reboot'
 alias restart='sudo reboot'
 alias autopush='bash ~/scripts/git-autopush.sh'
 alias m=mplayer
+alias mpv='mpv --volume=150'
 alias menu='sudo vi /boot/grub/grub.cfg'
 alias lo='libreoffice >/dev/null 2>/dev/null &'
 alias off='sudo sync; sudo shutdown -h now'
