@@ -78,6 +78,7 @@ alias cl="clear; figlet 'perl GNU LINUX' | lolcat -g 00FFFF:80FF00 -b"
 alias install='yes | sudo dnf install --repo=fedora'
 alias search='dnf search'
 
+alias calc=qalculate-qt
 alias ff=fastfetch
 alias copy='rsync -av --progress'
 alias xdomouse='xdotool getmouselocation'
