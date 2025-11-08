@@ -170,6 +170,7 @@ wicon() {
         Berkeley-Visitor \
         HotelZicoWIFI \
         AthertonPark \
+        BWElRanchoInn \
         "The Zen Hotel WiFi" \
         "Motel 6 Guest" \
         "Motel 6" \
