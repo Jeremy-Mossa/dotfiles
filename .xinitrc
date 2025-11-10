@@ -1,3 +1,4 @@
+echo 95 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold &
 brightnessctl set 70% &
 ~/scripts/kill_tplink_led.pl &
 xmodmap -e "keycode 66 = Shift_L" &
