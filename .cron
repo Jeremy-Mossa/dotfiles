@@ -1,2 +1,1 @@
-0,30 * * * * /home/unix/scripts/git-autopush.sh
-1,31 * * * * /home/unix/scripts/dotfile-backups.sh
+0,30 * * * * /home/jbm/scripts/git-autopush.sh

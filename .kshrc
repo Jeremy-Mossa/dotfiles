@@ -149,6 +149,7 @@ alias musicsync="$HOME/scripts/musicsync.sh"
 alias audio='yt-dlp -x --audio-format opus'
 alias reflux='pkill -HUP fluxbox'
 alias dongle='nmcli device disconnect wlp0s20f3 && sudo ip link set wlp0s20f3 down'
+alias cronedit='EDITOR=vim crontab -e'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
@@ -371,3 +372,4 @@ export ANDROID_SDK_ROOT=$HOME/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export CHROME_EXECUTABLE=/usr/bin/chromium-browser
+TEST
