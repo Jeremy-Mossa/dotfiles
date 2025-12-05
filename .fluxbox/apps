@@ -1,11 +1,5 @@
 [app] (name=fbrun)
-  [Position]	(CENTER)	{0 0}
+  [Position]	(WINCENTER)	{0 0}
   [Layer]	{2}
 [end]
-[app] (name=mupdf) (class=MuPDF)
-  [Dimensions]	{50% 99%}
-  [Position]	(UPPERLEFT)	{50% 0%}
-  [Sticky]	{no}
-[end]
-[app] (name=xterm) (class=XTerm)
-[end]
+

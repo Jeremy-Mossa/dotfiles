@@ -73,7 +73,7 @@ alias krc='vi ~/.kshrc'
 alias src='source ~/.kshrc'
 
 alias c=clear
-alias cl="clear; figlet 'perl GNU LINUX' | lolcat -g 00FFFF:80FF00 -b"
+alias cl="clear; figlet 'perl  GNU  LINUX' | lolcat -g 00FFFF:80FF00 -b"
 
 alias install='yes | sudo dnf install --repo=fedora'
 alias search='dnf search'
@@ -118,7 +118,7 @@ alias mulcon='mullvad connect && sleep 7 && ipaddr'
 alias grep='grep -i'
 alias update='yes | sudo dnf update'
 alias upgrade='yes | sudo dnf update'
-alias history='vim ~/.bash_history'
+alias history='vim ~/.sh_history'
 alias cathist='cat ~/.bash_history | grep'
 alias path='echo -e ${PATH//:/"\n"} | lolcat'
 alias ifc=ifconfig
@@ -133,7 +133,7 @@ alias ticker='bash ~/scripts/ticker.sh'
 alias newhop='perl ~/perl/relays.pl; sleep 5; ipaddr'
 alias dmesg='sudo dmesg'
 alias grok='perl ~/scripts/grok.sh'
-alias yt='firefox --private-window -P yt-adblock https://youtu.be >/dev/null 2>&1 &'
+alias yt='firefox --private-window -P default https://youtu.be >/dev/null 2>&1 &'
 alias icecat='icecat --private-window 2>&1 &'
 alias webstore='perl ~/scripts/webstore2.pl'
 alias vidcopy='/bin/ksh /home/jbm/scripts/vidcopy.sh'
@@ -144,8 +144,11 @@ alias line='/bin/ksh /home/jbm/scripts/line.sh'
 alias audiosmooth='/bin/ksh /home/jbm/scripts/audio_smooth.sh'
 alias fast=fastfetch
 alias ytc='$HOME/scripts/yt-cutter.sh'
+alias ytdl='yt-dlp -f "bv*[height<=720][ext=mp4]+ba/b[height<=720]" --merge-output-format mp4 URL'
 alias musicsync="$HOME/scripts/musicsync.sh"
 alias audio='yt-dlp -x --audio-format opus'
+alias reflux='pkill -HUP fluxbox'
+alias dongle='nmcli device disconnect wlp0s20f3 && sudo ip link set wlp0s20f3 down'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
@@ -171,6 +174,9 @@ wicon() {
         HotelZicoWIFI \
         AthertonPark \
         BWElRanchoInn \
+        kokohotels \
+        tsukiji-gate \
+        RodewayWiFi \
         "The Zen Hotel WiFi" \
         "Motel 6 Guest" \
         "Motel 6" \
@@ -203,9 +209,17 @@ pname()
   prename 's/\.\.\.//g' *
   prename 's/Second edition/2E/g' *
   prename 's/Second Edition/2E/g' *
+  prename 's/Speak Like a Thai Lesson//g' *
+  prename 's/Speak Like a Thai//g' *
+  prename 's/#LearnThaiOneDayOneSentence//g' *
+  prename 's/Learn Thai one day one sentence//g' *
   prename 's/2ed/2E/g' *
   prename 's/2nd edition/2E/g' *
   prename 's/2nd Edition/2E/g' *
+  prename 's/ \/\///g' *
+  prename 's/ ⧸⧸//g' *
+  prename 's/!!//g' *
+  prename 's/\s+(?=\.m)/ /g' *
 }
 
 repolist() {
