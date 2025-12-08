@@ -1,4 +1,5 @@
 xrdb -merge ~/.Xresources
+polybar &
 setxkbmap jp &
 echo 95 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold &
 brightnessctl set 50% &
