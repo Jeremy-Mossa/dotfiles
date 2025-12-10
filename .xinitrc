@@ -1,5 +1,5 @@
 xrdb -merge ~/.Xresources
-polybar &
+polybar -c ~/dotfiles/.polybar &
 setxkbmap jp &
 echo 95 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold &
 brightnessctl set 50% &
@@ -7,7 +7,7 @@ source ~/.kshrc &
 # ~/scripts/kill_tplink_led.pl &
 redshift -O 4500 &
 feh --bg-scale ~/Storage/wallpapers/tokyo_skyline1.jpg &
-xterm -geometry 70x10+600+40 &
+xterm -geometry 70x10+600+60 &
 
 # Japanese keyboard – カタカナ／ひらがな key → Right Alt
 sleep 2 && {
