@@ -56,8 +56,6 @@ modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth date
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-enable-ipc = true
-
 ; wm-restack = generic
 
 ; override-redirect = true
@@ -136,7 +134,7 @@ label-indicator-background = ${colors.secondary}
 
 [module/memory]
 type = internal/memory
-interval = 2
+interval = 5
 format-prefix = "RAM "
 format-prefix-foreground = ${colors.primary}
 label = %percentage_used:2%%
@@ -158,22 +156,82 @@ label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
 [module/wlan]
 inherit = network-base
 interface-type = wireless
-label-connected = %{F#F0C674}%ifname%%{F-} %essid% %local_ip%
+label-connected = %{F#F0C674}WiFi%{F#707880} %essid%
+label-disconnected = WiFi —
 
-[module/eth]
-inherit = network-base
-interface-type = wired
-label-connected = %{F#F0C674}%ifname%%{F-} %local_ip%
+; [module/eth]
+; inherit = network-base
+; interface-type = wired
+; label-connected = %{F#F0C674}%ifname%%{F-} %local_ip%
 
 [module/date]
 type = internal/date
-interval = 1
+interval = 60
 
-date = %H:%M
+date = %A -%e %b %Y - %H:%M
 date-alt = %Y-%m-%d %H:%M:%S
 
 label = %date%
 label-foreground = ${colors.primary}
+
+[module/battery]
+type = internal/battery
+
+; This is most likely correct on Fedora laptops
+battery = BAT1
+adapter = AC
+
+; How often to update (seconds)
+poll-interval = 5
+
+; ---- Horizontal fill bar ----
+bar-capacity-width = 10
+bar-capacity-format = %{+u}%fill%%empty%%{-u}
+bar-capacity-fill = █
+bar-capacity-fill-foreground = #ffffff
+bar-capacity-fill-font = 3
+bar-capacity-empty = ▭
+bar-capacity-empty-font = 3
+bar-capacity-empty-foreground = #555555
+
+; Color the bar itself depending on charge level
+bar-capacity-gradient = true
+bar-capacity-indicator = 
+bar-capacity-indicator-foreground = #ffffff
+
+; ---- Text percentage ----
+label = %percentage%%
+
+; ---- Full format (bar + percentage + charging symbol) ----
+format-charging = <animation-charging> <bar-capacity> <label>
+format-discharging = <ramp-capacity> <bar-capacity> <label>
+format-full = <ramp-capacity> <bar-capacity> <label>
+
+; Charging animation (little plug)
+animation-charging-0 = charging
+animation-charging-1 = charging
+animation-charging-framerate = 750
+
+; Battery icon that changes with charge level
+ramp-capacity-0 = low
+ramp-capacity-1 = mid
+ramp-capacity-2 = good
+ramp-capacity-3 = good
+ramp-capacity-4 = full
+
+; Colors
+format-charging-foreground = #90ee90
+format-charging-underline = #90ee90
+
+label-foreground = #dddddd
+label-padding = 1
+
+; Low-battery warning color
+format-discharging-underline = #ffb366
+format-discharging-foreground = #ffb366
+format-low = <ramp-capacity> <bar-capacity> <label>
+time-low = 10                ; turn red when <10%
+format-low-underline = #ff5555
 
 [settings]
 screenchange-reload = true
