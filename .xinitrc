@@ -17,7 +17,7 @@ sleep 2 && {
     xmodmap -e "add Shift = Shift_L"
     xmodmap -e "add Mod1  = Alt_R"
     xmodmap -e "keycode 132 = yen bar"
-    xmodmap -e "keycode 19 = zero Thai_baht"
+    xmodmap -e "keycode 49 = Thai_baht"
 } &
 
 exec fluxbox 
