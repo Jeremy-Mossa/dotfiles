@@ -6,7 +6,7 @@ brightnessctl set 50% &
 source ~/.kshrc &
 # ~/scripts/kill_tplink_led.pl &
 redshift -O 4500 &
-feh --bg-scale ~/Storage/wallpapers/tokyo_skyline1.jpg &
+feh --bg-scale ~/wallpapers/tokyo_skyline1.jpg &
 xterm -geometry 70x10+600+60 &
 
 # Japanese keyboard – カタカナ／ひらがな key → Right Alt
