@@ -306,7 +306,7 @@ downloads()
 
 vids()
 {
-	cd ~/Downloads/vids
+	cd ~/videos
 }
 
 media()
