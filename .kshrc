@@ -208,6 +208,9 @@ pname()
   prename 's/： /_/g' *
   prename 's/ ｜ / /g' *
   prename 's/\.\.\.//g' *
+  prename 's/\. \. \. //g' *
+  prename 's/ \. \. \. //g' *
+  prename 's/\.\./\./g' *
   prename 's/Second edition/2E/g' *
   prename 's/Second Edition/2E/g' *
   prename 's/Speak Like a Thai Lesson//g' *
