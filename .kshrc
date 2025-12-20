@@ -135,7 +135,8 @@ alias dmesg='sudo dmesg'
 alias grok='perl ~/scripts/grok.sh'
 alias yt='firefox --private-window -P default https://youtu.be >/dev/null 2>&1 &'
 alias icecat='icecat --private-window 2>&1 &'
-alias webstore='perl ~/scripts/webstore2.pl'
+alias webstore='perl ~/scripts/webstore.pl'
+alias phonesync='perl ~/scripts/phonesync.pl'
 alias vidcopy='/bin/ksh /home/jbm/scripts/vidcopy.sh'
 alias mirror='/bin/ksh /home/jbm/scripts/mirror.sh'
 alias geny='/opt/genymobile/genymotion/genymotion'
@@ -197,6 +198,7 @@ wicon() {
 
 pname()
 {
+  prename 's/'\''s/s/g' *
   prename 's/\[[^]]*\]//' *
   prename 's/ \./\./' *
   prename 's/  / /' *
