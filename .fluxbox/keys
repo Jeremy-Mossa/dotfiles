@@ -40,3 +40,5 @@ Control Mod1 f :Maximize
 Mod1 Tab :NextWindow (workspace=[current]) raise
 Control Mod1 Left :PrevWorkspace
 Control Mod1 Right :NextWorkspace
+Control Mod1 h :ExecCommand xterm -geometry 65x53
+Control Mod1 b :ExecCommand /usr/bin/perl ~/scripts/grok2.pl
