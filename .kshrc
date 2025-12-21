@@ -209,6 +209,7 @@ pname()
   prename 's/\(//; s/\)//g' *
   prename 's/： /_/g' *
   prename 's/ ｜ / /g' *
+  prename 's/\.\.\.opus/\.opus/g' *
   prename 's/\.\.\.//g' *
   prename 's/\. \. \. //g' *
   prename 's/ \. \. \. //g' *
