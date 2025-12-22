@@ -147,10 +147,11 @@ alias fast=fastfetch
 alias ytc='$HOME/scripts/yt-cutter.sh'
 alias ytdl='yt-dlp -f "bv*[height<=720][ext=mp4]+ba/b[height<=720]" --merge-output-format mp4 URL'
 alias musicsync="$HOME/scripts/musicsync.sh"
-alias audio='yt-dlp -x --audio-format opus && sleep 4 && pname'
 alias reflux='pkill -HUP fluxbox'
 alias dongle='nmcli device disconnect wlp0s20f3 && sudo ip link set wlp0s20f3 down'
 alias cronedit='EDITOR=vim crontab -e'
+alias audio='yt-dlp -x --no-progress --no-warnings --audio-format opus' 
+
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
