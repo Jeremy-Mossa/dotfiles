@@ -182,11 +182,11 @@ poll-interval = 30
 
 format-charging    = <label-charging>
 format-discharging = <label-discharging>
-format-full        = BAT1 %percentage%%%
+format-full        = BAT1 100%
 
 label-charging     = BAT1 %{F#FF8800}+%percentage%%%{F-} ⚡
 label-discharging  = BAT1 %{F#FF8800}%percentage%%%{F-}
-label-full         = BAT1 %{F#FF8800}%percentage%%%{F-}
+label-full         = BAT1 %{F#FF8800}100%{F-}
 
 label-charging-foreground = ${colors.foreground}
 label-discharging-foreground = ${colors.foreground}
