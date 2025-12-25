@@ -228,6 +228,8 @@ pname()
   prename 's/ ⧸⧸//g' *
   prename 's/!!//g' *
   prename 's/\s+(?=\.m)/ /g' *
+  prename 's/([^.])mp4$/$1.mp4/ig' *
+  prename 's/([^.])opus$/$1.opus/ig' *
 }
 
 repolist() {
