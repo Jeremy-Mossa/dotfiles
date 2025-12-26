@@ -1,4 +1,6 @@
 @reboot /home/jbm/scripts/webstore.pl
+@reboot /home/jbm/scripts/clips.pl >/dev/null 2>&1
 0,30 * * * * /home/jbm/scripts/git-autopush.sh
-0 */20 * * * /home/jbm/scripts/webstore.pl
-0 6,8,10,13 * * 1-5 /home/jbm/scripts/ticker.pl --update-only
+1 */20 * * * /home/jbm/scripts/webstore.pl
+2 6,8,10,13 * * 1-5 /home/jbm/scripts/ticker.pl --update-only
+3 */12 * * * /home/jbm/scripts/clips.pl >/dev/null 2>&1
