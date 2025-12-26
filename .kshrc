@@ -158,7 +158,12 @@ alias func='typeset -f'
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
 alias ipgrep="grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'"
 
-wicon() {
+scan()
+{
+  cat $1 | xclip -selection clipboard
+}
+wicon()
+{
   # Reset the USB interface
   sudo ifconfig "$usb" down >/dev/null 2>&1
   sudo ifconfig "$usb" up >/dev/null 2>&1
@@ -318,6 +323,11 @@ media()
 cpp()
 {
   cd ~/C++
+}
+
+leet()
+{
+  cd ~/perl/1337
 }
 
 play()
