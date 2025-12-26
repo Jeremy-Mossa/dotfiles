@@ -151,6 +151,7 @@ alias reflux='pkill -HUP fluxbox'
 alias dongle='nmcli device disconnect wlp0s20f3 && sudo ip link set wlp0s20f3 down'
 alias cronedit='EDITOR=vim crontab -e'
 alias audio='yt-dlp -x --no-progress --no-warnings --audio-format opus' 
+alias func='typeset -f'
 
 
 # :xdigit: for hexidecimal characters
@@ -158,43 +159,43 @@ alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
 alias ipgrep="grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'"
 
 wicon() {
-    # Reset the USB interface
-    sudo ifconfig "$usb" down >/dev/null 2>&1
-    sudo ifconfig "$usb" up >/dev/null 2>&1
+  # Reset the USB interface
+  sudo ifconfig "$usb" down >/dev/null 2>&1
+  sudo ifconfig "$usb" up >/dev/null 2>&1
 
-    # Scan WiFi networks once and store the list
-    wifi_list=$(nmcli dev wifi list)
+  # Scan WiFi networks once and store the list
+  wifi_list=$(nmcli dev wifi list)
 
-    # List of networks in priority order
-    for ssid in \
-        88:DC:97:0D:D5:5D \
-        UD025 \
-        Xperia5iii \
-        cmvlib \
-        guests \
-        HotelVue \
-        Berkeley-Visitor \
-        HotelZicoWIFI \
-        AthertonPark \
-        BWElRanchoInn \
-        kokohotels \
-        tsukiji-gate \
-        RodewayWiFi \
-        "The Zen Hotel WiFi" \
-        "Motel 6 Guest" \
-        "Motel 6" \
-        "Motel6 (Macrotech)" \
-        "CitiGarden Guest"; do
+  # List of networks in priority order
+  for ssid in \
+    88:DC:97:0D:D5:5D \
+    UD025 \
+    Xperia5iii \
+    cmvlib \
+    guests \
+    HotelVue \
+    Berkeley-Visitor \
+    HotelZicoWIFI \
+    AthertonPark \
+    BWElRanchoInn \
+    kokohotels \
+    tsukiji-gate \
+    RodewayWiFi \
+    "The Zen Hotel WiFi" \
+    "Motel 6 Guest" \
+    "Motel 6" \
+    "Motel6 (Macrotech)" \
+    "CitiGarden Guest"; do
 
-        # Check if the SSID is in the list
-        if echo "$wifi_list" | grep -q "$ssid"; then
-            # Connect to first matching network
-            nmcli dev wifi connect "$ssid" --ask
-            return  # Exit after successful conn
-        fi
-    done
+    # Check if the SSID is in the list
+    if echo "$wifi_list" | grep -q "$ssid"; then
+        # Connect to first matching network
+        nmcli dev wifi connect "$ssid" --ask
+        return  # Exit after successful conn
+    fi
+  done
 
-    echo "No network found"
+  echo "No network found"
 }
 
 pname()
@@ -233,16 +234,16 @@ pname()
 }
 
 repolist() {
-    if [ -z "$1" ]; then
-        echo "Usage: repolist <username>"
-        return 1
-    fi
-    echo
-    jq_expr='.[] | "name: \(.name)\n" +'
-    jq_expr="$jq_expr \"description: \(.description)\n\" +"
-    jq_expr="$jq_expr \"url: \(.html_url)\n\n\""
-    curl -s "https://api.github.com/users/$1/repos" |
-    jq -r "$jq_expr"
+  if [ -z "$1" ]; then
+      echo "Usage: repolist <username>"
+      return 1
+  fi
+  echo
+  jq_expr='.[] | "name: \(.name)\n" +'
+  jq_expr="$jq_expr \"description: \(.description)\n\" +"
+  jq_expr="$jq_expr \"url: \(.html_url)\n\n\""
+  curl -s "https://api.github.com/users/$1/repos" |
+  jq -r "$jq_expr"
 }
 
 tidyperl()
@@ -260,18 +261,9 @@ ipaddr()
   rm ipaddr
 }
 
-kandr()
+xbook()
 {
-  # book is 238 pages
-  bash ~/scripts/bookview.sh &
-  firejail /bin/mupdf -r 125 \
-  ~/books/Computer\ Sci*/Progr*Books/*Ritchie* 27 \
-  2>/dev/null & exit 
-}
-
-perlbook()
-{
-  # book is 823 pages
+  # book is x pages
   bash ~/scripts/bookview.sh &
   firejail /bin/mupdf -r 180 \
   ~/books/.pdf 1 \
