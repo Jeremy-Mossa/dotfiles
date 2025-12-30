@@ -187,6 +187,7 @@ wicon()
     tsukiji-gate \
     RodewayWiFi \
     "The Zen Hotel WiFi" \
+    "Alpine Inn WiFi" \
     "Motel 6 Guest" \
     "Motel 6" \
     "Motel6 (Macrotech)" \
