@@ -152,7 +152,7 @@ alias dongle='nmcli device disconnect wlp0s20f3 && sudo ip link set wlp0s20f3 do
 alias cronedit='EDITOR=vim crontab -e'
 alias audio='yt-dlp -x --no-progress --no-warnings --audio-format opus' 
 alias func='typeset -f'
-
+alias clips='~/scripts/clips.pl'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
@@ -174,6 +174,7 @@ wicon()
   # List of networks in priority order
   for ssid in \
     88:DC:97:0D:D5:5D \
+    88:DC:97:01:E9:DD \
     UD025 \
     Xperia5iii \
     cmvlib \
@@ -187,7 +188,6 @@ wicon()
     tsukiji-gate \
     RodewayWiFi \
     "The Zen Hotel WiFi" \
-    "Alpine Inn WiFi" \
     "Motel 6 Guest" \
     "Motel 6" \
     "Motel6 (Macrotech)" \
