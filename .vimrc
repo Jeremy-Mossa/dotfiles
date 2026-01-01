@@ -21,3 +21,12 @@ set history=1000
 set wildmenu
 set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+" This will add an ascii separator and closer e.g. :Sep Config
+" #--- Config ---
+" #--------------
+command! -nargs=+ Sep
+  \ call system('ascii_separator.pl '
+  \ . shellescape(expand('%')) . ' '
+  \ . line('.') . ' "' . <q-args> . '"')
+  \ | silent edit!

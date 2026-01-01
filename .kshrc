@@ -381,4 +381,5 @@ export QEMU_GLES_EMULATION=software
 export ANDROID_SDK_ROOT=$HOME/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH="$PATH:/home/jbm/perl"
 export CHROME_EXECUTABLE=/usr/bin/chromium-browser
