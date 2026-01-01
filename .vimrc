@@ -1,3 +1,5 @@
+set perldll=/usr/lib64/perl5/CORE/libperl.so
+
 colorscheme murphy
 
 set modeline
@@ -24,7 +26,7 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " This will add an ascii separator and closer e.g. :Sep Config
 " #--- Config ---
-" #--------------
+" #--------------, but 72 chars wide for sep and closer
 command! -nargs=+ Sep
   \ call system('ascii_separator.pl '
   \ . shellescape(expand('%')) . ' '
