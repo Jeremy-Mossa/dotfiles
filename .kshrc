@@ -173,6 +173,7 @@ wicon()
 
   # List of networks in priority order
   for ssid in \
+    88:DC:97:01:E9:F5 \
     UD025 \
     Xperia5iii \
     cmvlib \
@@ -187,6 +188,7 @@ wicon()
     RodewayWiFi \
     "The Zen Hotel WiFi" \
     "Motel 6 Guest" \
+    "Alpine Inn WiFi" \
     "Motel 6" \
     "Motel6 (Macrotech)" \
     "CitiGarden Guest"; do
