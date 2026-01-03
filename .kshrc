@@ -104,8 +104,6 @@ alias du='du -hs'
 alias py=python
 alias ldev='ls /dev/ | grep sd'
 alias lynx='lynx -vikeys'
-alias x0='xbacklight -dec 100'
-alias phys='epdfview /home/jbm/classes/physics/physics*every*pdf*'
 alias keys='vi /home/jbm/.fluxbox/keys'
 alias am=alsamixer
 alias df='df -h | head -n2'
@@ -270,7 +268,7 @@ xbook()
 {
   # book is x pages
   bash ~/scripts/bookview.sh &
-  firejail /bin/mupdf -r 180 \
+  firejail /bin/mupdf -r n \
   ~/books/.pdf 1 \
   2>/dev/null & exit
 }
