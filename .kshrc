@@ -373,7 +373,7 @@ xrdb -merge ~/.Xresources
 export audiobooks='/storage/emulated/0/Audiobooks'
 export music='/storage/emulated/0/Music'
 export podcasts='/storage/emulated/0/Podcasts'
-export dir='/storage/emulated/0/'
+export phone='/storage/emulated/0/'
 export usb=$(ip link | grep wlp | cut -d':' -f2 | sed 's/ //')
 export PATH="$HOME/flutter/bin:$PATH"
 export CXX=clang++
