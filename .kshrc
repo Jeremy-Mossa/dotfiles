@@ -382,3 +382,4 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH="$PATH:/home/jbm/perl"
 export CHROME_EXECUTABLE=/usr/bin/chromium-browser
+eval "$(perl -I~/perl5/lib/perl5 -Mlocal::lib)"
