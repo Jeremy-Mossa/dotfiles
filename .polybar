@@ -168,7 +168,7 @@ label-disconnected = WiFi —
 type = internal/date
 interval = 60
 
-date = %A -%e %b %Y - %H:%M
+date = %A - %e %b %Y - %H:%M
 date-alt = %Y-%m-%d %H:%M:%S
 
 label = %date%
