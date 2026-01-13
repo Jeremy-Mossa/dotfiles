@@ -1,3 +1,4 @@
+MAILTO=""
 @reboot /home/jbm/scripts/webstore.pl
 @reboot /home/jbm/scripts/clips.pl >/dev/null 2>&1
 0,30 * * * * /home/jbm/scripts/git-autopush.sh
