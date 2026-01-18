@@ -359,6 +359,7 @@ batch_rename()
 
 combine() {
   rm *.jpg
+  rm *.txt
   pname .
   name=$(echo $PWD | cut -d'/' -f6)
   ls *.{mp3,m4b} > chapters.txt 2>/dev/null
@@ -366,8 +367,7 @@ combine() {
   ffmpeg -f concat -safe 0 -i chapters.txt -c copy $name.mp3
   rm *.txt
   mv $name.mp3 /home/jbm/Downloads/audiobooks
-  cd /home/jbm/Downloads/audiobooks
-  rm -rf $name
+  rm -rf /home/jbm/Downloads/audiobooks/$name
 }
 
 words()
