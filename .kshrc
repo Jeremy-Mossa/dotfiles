@@ -357,6 +357,19 @@ batch_rename()
   done
 }
 
+combine() {
+  rm *.jpg
+  pname .
+  name=$(echo $PWD | cut -d'/' -f6)
+  ls *.{mp3,m4b} > chapters.txt 2>/dev/null
+  sed -i "s/^/file '/; s/$/'/" chapters.txt
+  ffmpeg -f concat -safe 0 -i chapters.txt -c copy $name.mp3
+  rm *.txt
+  mv $name.mp3 /home/jbm/Downloads/audiobooks
+  cd /home/jbm/Downloads/audiobooks
+  rm -rf $name
+}
+
 words()
 {
   wc $1 -w | cut -d' ' -f1
