@@ -370,6 +370,12 @@ combine() {
   rm -rf /home/jbm/Downloads/audiobooks/$name
 }
 
+notether() {
+  dev=$(nmcli con show | grep enp | cut -d' ' -f11)
+  mcli dev disconnect $dev
+  scrcpy
+}
+
 words()
 {
   wc $1 -w | cut -d' ' -f1
