@@ -234,6 +234,7 @@ pname()
   prename 's/\s+(?=\.m)/ /g' *
   prename 's/([^.])mp4$/$1.mp4/ig' *
   prename 's/([^.])opus$/$1.opus/ig' *
+  prename 's/([^.])webp$/$1.webp/ig' *
   for file in *\ 0*.{mp3,m4b}; do
     mv "$file" "${file/ 0/ }"
   done
