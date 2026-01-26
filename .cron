@@ -4,4 +4,4 @@ MAILTO=""
 0,30 * * * * /home/jbm/scripts/git-autopush.sh
 1 */10 * * * /home/jbm/scripts/webstore.pl
 2 */2 * * * /home/jbm/scripts/ticker.pl --update-only
-3 */12 * * * /home/jbm/scripts/clips.pl >/dev/null 2>&1
+# 3 */12 * * * /home/jbm/scripts/clips.pl >/dev/null 2>&1
