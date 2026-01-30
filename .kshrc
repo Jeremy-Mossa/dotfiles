@@ -184,6 +184,7 @@ wicon()
     tsukiji-gate \
     RodewayWiFi \
     "The Zen Hotel WiFi" \
+    "Lia Hotel WiFi" \
     "Motel 6 Guest" \
     "Alpine Inn WiFi" \
     "Motel 6" \
