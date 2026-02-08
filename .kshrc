@@ -328,11 +328,6 @@ cpp()
   cd ~/C++
 }
 
-leet()
-{
-  cd ~/perl/1337
-}
-
 play()
 {
   firefox --no-remote -P "temp-profile" \
