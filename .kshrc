@@ -150,6 +150,7 @@ alias cronedit='EDITOR=vim crontab -e'
 alias audio='yt-dlp -x --no-progress --no-warnings --audio-format opus' 
 alias func='typeset -f'
 alias clips='~/scripts/clips.pl'
+alias curr='vim ~/Documents/currencies.txt'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
