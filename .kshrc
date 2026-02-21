@@ -185,6 +185,7 @@ wicon()
     tsukiji-gate \
     RodewayWiFi \
     "The Zen Hotel WiFi" \
+    "#SFO FREE WIFI" \
     "Lia Hotel WiFi" \
     "Motel 6 Guest" \
     "Alpine Inn WiFi" \
