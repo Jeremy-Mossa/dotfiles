@@ -1,8 +1,7 @@
 xrdb -merge ~/.Xresources
 polybar -c ~/dotfiles/.polybar &
 setxkbmap jp &
-echo 95 | sudo tee \
-  /sys/class/power_supply/BAT0/charge_control_end_threshold &
+echo 95 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold &
 brightnessctl set 70% &
 source ~/.kshrc &
 # ~/scripts/kill_tplink_led.pl &

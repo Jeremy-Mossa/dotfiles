@@ -1,5 +1,9 @@
 set perldll=/usr/lib64/perl5/CORE/libperl.so
 
+syntax enable
+filetype plugin indent on
+set t_Co=256
+set termguicolors   " extra safety for modern xterm
 colorscheme murphy
 
 set modeline
