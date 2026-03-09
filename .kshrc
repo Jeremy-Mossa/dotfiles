@@ -382,7 +382,7 @@ words()
 
 writer()
 {
-  xterm -T "Writer" -geometry 90x53+510+0 &
+  xterm -T "Writer" -geometry 90x53+510+40 &
   sleep 0.1
   wmctrl -r "Writer" -b add,maximized_vert
 }
