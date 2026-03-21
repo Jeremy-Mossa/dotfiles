@@ -112,7 +112,6 @@ alias mupdf="firejail /bin/mupdf"
 alias wifi='nmcli dev wifi'
 alias lock='xsecurelock 2>/dev/null'
 alias free='free -h'
-alias mulcon='mullvad connect && sleep 7 && ipaddr'
 alias grep='grep -i'
 alias update='yes | sudo dnf update'
 alias upgrade='yes | sudo dnf update'
@@ -270,6 +269,20 @@ ipaddr()
   sed 's/<td>//g;s/<\/td>/ /g;s/<b>//g;s/<\/b>//g' |\
   lolcat -g 00FFFF:80FF00 -b
   rm ipaddr
+}
+
+mulcon()
+{
+  if [[ $(getenforce) == "Enforcing" ]]; then
+    sudo setenforce 0
+    trap 'sudo setenforce 1; echo "SELinux restored to Enforcing"' EXIT
+  fi
+  mullvad connect
+  # rewrite as perl script
+  sleep 12
+  wait
+  ipaddr
+  sudo setenforce 1
 }
 
 xbook()
