@@ -108,6 +108,16 @@ label-mounted = %{F#F0C674}%mountpoint%%{F-} %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}
 
+[module/brightness]
+type = custom/script
+exec = /bin/brightnessctl -m | cut -d',' -f4
+tail = true               ; update when brightness changes
+interval = 10             ; fallback poll if tail doesn't work
+format = <label>
+format-prefix = "BRI "
+format-prefix-foreground = ${colors.primary}
+label = %output%%
+
 [module/pulseaudio]
 type = internal/pulseaudio
 
