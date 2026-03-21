@@ -160,6 +160,7 @@ scan()
 {
   cat $1 | xclip -selection clipboard
 }
+
 wicon()
 {
   # Reset the USB interface
