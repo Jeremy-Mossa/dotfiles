@@ -267,7 +267,7 @@ tidyperl()
 ipaddr()
 {
   curl -s -o ipaddr -A "Windows NT" https://www.showmyip.com
-  grep -E '>City|>Country|>Your IPv4|>Internet' ipaddr |\
+  /bin/grep -E '>City|>Country|>Your IPv4|>Internet' ipaddr |\
   sed 's/<td>//g;s/<\/td>/ /g;s/<b>//g;s/<\/b>//g' |\
   lolcat -g 00FFFF:80FF00 -b
   rm ipaddr
