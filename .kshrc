@@ -385,6 +385,14 @@ combine() {
   rm -rf /home/jbm/Downloads/audiobooks/$name
 }
 
+tether() {
+  scrcpy \
+   --new-display=2560x1440/240 \
+   --stay-awake \
+   --video-codec=h265 \
+   --max-fps=60
+}
+
 notether() {
   dev=$(nmcli con show | grep enp | cut -d' ' -f11)
   mcli dev disconnect $dev
