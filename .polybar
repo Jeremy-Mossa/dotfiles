@@ -50,7 +50,8 @@ separator-foreground = ${colors.disabled}
 
 font-0 = hack;2
 
-modules-left = xworkspaces xwindow
+; old modules-left = xworkspaces xwindow
+modules-left = xworkspaces
 modules-right = filesystem brightness pulseaudio xkeyboard memory cpu wlan date battery
 
 cursor-click = pointer
@@ -93,9 +94,10 @@ label-empty-padding = 1
 index-sort = true
 max-workspaces = 6
 
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:60:...%
+; [module/xwindow]
+; type = internal/xwindow
+; label = %title:0:60:...%
+; the above was for window titles but took too much space in bar
 
 [module/filesystem]
 type = internal/fs
