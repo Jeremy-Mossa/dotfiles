@@ -126,7 +126,6 @@ alias chargecontrol='cat /sys/class/power_supply/BAT0/charge_control_end_thresho
 alias progperl='$HOME/scripts/progperl.pl'
 alias more=less
 alias rmd='rm -rf'
-alias ai='bash ~/scripts/studio_ai.sh'
 alias wthr='perl ~/scripts/wthr.pl'
 alias ticker='perl ~/scripts/ticker.pl'
 alias newhop='perl ~/perl/relays.pl; sleep 5; ipaddr'
@@ -140,7 +139,6 @@ alias mirror='/bin/ksh /home/jbm/scripts/mirror.sh'
 alias geny='/opt/genymobile/genymotion/genymotion'
 alias chrome='/usr/bin/chromium-browser'
 alias line='/bin/ksh /home/jbm/scripts/line.sh'
-alias audiosmooth='/bin/ksh /home/jbm/scripts/audio_smooth.sh'
 alias fast=fastfetch
 alias ytc='$HOME/scripts/yt-cutter.sh'
 alias ytdl='yt-dlp -f "bv*[height<=720][ext=mp4]+ba/b[height<=720]" --merge-output-format mp4 URL'
@@ -150,8 +148,6 @@ alias dongle='nmcli device disconnect wlp0s20f3 && sudo ip link set wlp0s20f3 do
 alias cronedit='EDITOR=vim crontab -e'
 alias audio='yt-dlp -x --no-progress --no-warnings --audio-format opus' 
 alias func='typeset -f'
-alias clips='~/scripts/clips.pl'
-alias curr='vim ~/Documents/currencies.txt'
 
 # :xdigit: for hexidecimal characters
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
