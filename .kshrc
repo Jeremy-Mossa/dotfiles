@@ -138,6 +138,7 @@ alias vidcopy='/bin/ksh /home/jbm/scripts/vidcopy.sh'
 alias mirror='/bin/ksh /home/jbm/scripts/mirror.sh'
 alias geny='/opt/genymobile/genymotion/genymotion'
 alias chrome='/usr/bin/chromium-browser'
+alias icecat="$HOME/perl/icecat.pl"
 alias line='/bin/ksh /home/jbm/scripts/line.sh'
 alias fast=fastfetch
 alias ytc='$HOME/scripts/yt-cutter.sh'
