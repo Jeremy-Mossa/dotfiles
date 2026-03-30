@@ -1,0 +1,73 @@
+# vars
+set $mod Mod1
+set $term foot
+
+# copy paste
+exec wl-paste -p --watch wl-copy
+
+# bluelight filter
+exec wlsunset -t 4500
+exec wlsunset -T 4500
+
+# waybar
+exec waybar
+
+# === Japanese Keyboard layout ===
+input * {
+  xkb_layout "jp"
+}
+
+# === Natural Scrolling ===
+input type:touchpad {
+  tap enabled
+  natural_scroll enabled
+  scroll_method two_finger
+  dwt enabled
+}
+
+input type:pointer {
+  natural_scroll enabled
+}
+
+# === Direct workspace switching (1-6) ===
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+
+# === Move container to workspace ===
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+
+# === Cycle with Ctrl+Alt + Left/Right ===
+bindsym Ctrl+$mod+Left  workspace prev
+bindsym Ctrl+$mod+Right workspace next
+
+bindsym Ctrl+$mod+Shift+Left  move container to workspace prev
+bindsym Ctrl+$mod+Shift+Right move container to workspace next
+
+# Auto-start one Foot terminal on workspaces 1-5 (empty shell)
+exec swaymsg 'workspace 1; exec foot --title WS1'
+exec swaymsg 'workspace 2; exec firefox'
+exec swaymsg 'workspace 3; exec foot --title WS3'
+exec swaymsg 'workspace 4; exec foot --title WS4'
+exec swaymsg 'workspace 5; exec foot --title WS5'
+
+# Workspace 6: Foot terminal titled "btop" running btop
+exec swaymsg 'workspace 6; exec foot --title btop -e btop'
+
+# open terminal emulator
+bindsym Ctrl+$mod+t exec $term --title terminal
+
+default_border pixel 2
+default_floating_border pixel 2
+
+client.focused           #555555 #555555 #ffffff
+client.focused_inactive  #333333 #333333 #888888
+client.unfocused         #222222 #222222 #666666
