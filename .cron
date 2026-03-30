@@ -1,4 +1,0 @@
-MAILTO=""
-@reboot /home/jbm/scripts/webstore.pl
-0,30 * * * * /home/jbm/scripts/git-autopush.sh
-2 */2 * * * /home/jbm/scripts/ticker.pl --update-only

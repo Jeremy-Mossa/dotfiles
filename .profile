@@ -1,0 +1,6 @@
+
+# Auto-start Sway on tty1 login (ksh version)
+if [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && \
+  [ "$(tty)" = "/dev/tty1" ]; then
+    exec sway
+fi

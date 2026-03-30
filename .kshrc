@@ -78,6 +78,7 @@ alias cl="clear; figlet 'perl  GNU  LINUX' | lolcat -g 00FFFF:80FF00 -b"
 alias install='yes | sudo dnf install --repo=fedora'
 alias search='dnf search'
 
+alias swayconf="vi $HOME/.config/sway/config"
 alias calc=qalculate-qt
 alias ff=fastfetch
 alias copy='rsync -av --progress'
@@ -154,9 +155,16 @@ alias func='typeset -f'
 alias macgrep="grep -Eo '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'"
 alias ipgrep="grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'"
 
+# dump text from file into wl-copy on wayland
 scan()
 {
-  cat $1 | xclip -selection clipboard
+    [ -z "$1" ] && { echo "Usage: scan <filename>" >&2; return 1; }
+    wl-copy < "$1"
+}
+
+paste()
+{
+    wl-paste
 }
 
 wicon()
@@ -401,15 +409,6 @@ words()
   wc $1 -w | cut -d' ' -f1
 }
 
-writer()
-{
-  xterm -T "Writer" -geometry 90x53+510+40 &
-  sleep 0.1
-  wmctrl -r "Writer" -b add,maximized_vert
-}
-
-xrdb -merge ~/.Xresources 
-
 export audiobooks='/storage/emulated/0/Audiobooks'
 export music='/storage/emulated/0/Music'
 export podcasts='/storage/emulated/0/Podcasts'
@@ -420,8 +419,6 @@ export accentum='80:C3:BA:5D:BA:53'
 export marshall='00:25:D1:3F:E6:77'
 export PATH="$HOME/flutter/bin:$PATH"
 export CXX=clang++
-export MESA_GL_VERSION_OVERRIDE=3.3 MESA_GLSL_VERSION_OVERRIDE=330
-export QEMU_GLES_EMULATION=software
 export ANDROID_SDK_ROOT=$HOME/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
